@@ -7,8 +7,8 @@
 //
 
 #import "YKBirthdayMgr.h"
-#import "YKHappyBirthdayViewController.h"
 #import "YKAudioPlayerMgr.h"
+#import "YKHappyBirthdayViewController.h"
 
 typedef void(^YKBirthdayControllerHiddenCompelectionBlock)();
 

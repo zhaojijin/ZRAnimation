@@ -8,6 +8,7 @@
 
 #import "YKBirthdayView.h"
 #import "YKAudioPlayerMgr.h"
+#import "UIColor+YKColor.h"
 
 @interface YKBirthdayView () <CAAnimationDelegate>
 
@@ -38,19 +39,17 @@
 
 @property (nonatomic, assign) CGPoint bodyCenterPoint;
 @property (nonatomic, assign) CGFloat bodyRadius;
-
 @property (nonatomic, assign) CGFloat uiScale;
-
-@property (nonatomic, strong) CAMediaTimingFunction* animationTimingFunction;
 
 @property (nonatomic, strong) UIView *containView;
 @property (nonatomic, strong) UILabel *birthdayTitleLabel;
 @property (nonatomic, strong) UILabel *birthdaySubTitleLabel;
 @property (nonatomic, strong) UILabel *birthdayDescriptionLabel;
-
 @property (nonatomic, strong) UIButton *receiveButton;
 
 @property (nonatomic, strong) NSMutableArray *animationList;
+
+@property (nonatomic, strong) CAMediaTimingFunction* animationTimingFunction;
 
 @end
 
@@ -196,7 +195,7 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 - (UILabel *)getLabel:(CGRect)frame text:(NSString *)text {
     UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.textColor = [self colorWithValue:0xffc30228];
+    label.textColor = [UIColor yk_colorWithValue:0xffc30228];
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 0;
     label.font = [UIFont systemFontOfSize:12];
@@ -420,21 +419,6 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     }];
 }
 
-#pragma mark - color
-
-- (UIColor *)colorWithValue:(NSUInteger)colorValue {
-    
-    CGFloat red = ((colorValue & 0x00FF0000) >> 16) / 255.0;
-    
-    CGFloat green = ((colorValue & 0x0000FF00) >> 8) / 255.0;
-    
-    CGFloat blue = (colorValue & 0x000000FF) / 255.0;
-    
-    CGFloat alpha = ((colorValue & 0xFF000000) >> 24) / 255.0;
-    
-    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
-}
-
 #pragma mark - animationDelegate
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
@@ -651,13 +635,5 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     }
     return _containView;
 }
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end
