@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00E80C492064A6A900BEB84B /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00E80C482064A6A900BEB84B /* bg.jpg */; };
 		7152F8591DF6A96C003F79E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F8581DF6A96C003F79E2 /* main.m */; };
 		7152F85C1DF6A96C003F79E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F85B1DF6A96C003F79E2 /* AppDelegate.m */; };
 		7152F85F1DF6A96C003F79E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F85E1DF6A96C003F79E2 /* ViewController.m */; };
@@ -22,7 +23,6 @@
 		7152F89B1DF6A9A3003F79E2 /* YKHappyBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7152F8961DF6A9A3003F79E2 /* YKHappyBirthdayViewController.xib */; };
 		7152F89E1DF6AB7C003F79E2 /* YKAudioPlayerMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F89D1DF6AB7C003F79E2 /* YKAudioPlayerMgr.m */; };
 		7194F5771FA2CB57001B4ADF /* UIColor+YKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7194F5761FA2CB57001B4ADF /* UIColor+YKColor.m */; };
-		7194F57A1FA2CD21001B4ADF /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7194F5791FA2CD21001B4ADF /* bg.jpg */; };
 		7194F57D1FA2CD41001B4ADF /* birthday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7194F57C1FA2CD41001B4ADF /* birthday.mp3 */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E80C482064A6A900BEB84B /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		7152F8541DF6A96C003F79E2 /* YKBirthdayViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKBirthdayViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7152F8581DF6A96C003F79E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7152F85A1DF6A96C003F79E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,7 +74,6 @@
 		7152F89D1DF6AB7C003F79E2 /* YKAudioPlayerMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKAudioPlayerMgr.m; sourceTree = "<group>"; };
 		7194F5751FA2CB57001B4ADF /* UIColor+YKColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+YKColor.h"; sourceTree = "<group>"; };
 		7194F5761FA2CB57001B4ADF /* UIColor+YKColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YKColor.m"; sourceTree = "<group>"; };
-		7194F5791FA2CD21001B4ADF /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		7194F57C1FA2CD41001B4ADF /* birthday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birthday.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -222,7 +222,6 @@
 			isa = PBXGroup;
 			children = (
 				7194F57B1FA2CD41001B4ADF /* birthdayAudio */,
-				7194F5791FA2CD21001B4ADF /* bg.jpg */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -231,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				7194F57C1FA2CD41001B4ADF /* birthday.mp3 */,
+				00E80C482064A6A900BEB84B /* bg.jpg */,
 			);
 			path = birthdayAudio;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 				7194F57D1FA2CD41001B4ADF /* birthday.mp3 in Resources */,
 				7152F8641DF6A96C003F79E2 /* Assets.xcassets in Resources */,
 				7152F89B1DF6A9A3003F79E2 /* YKHappyBirthdayViewController.xib in Resources */,
-				7194F57A1FA2CD21001B4ADF /* bg.jpg in Resources */,
+				00E80C492064A6A900BEB84B /* bg.jpg in Resources */,
 				7152F8621DF6A96C003F79E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
