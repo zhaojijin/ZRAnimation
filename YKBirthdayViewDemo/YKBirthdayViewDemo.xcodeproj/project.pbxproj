@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E80C492064A6A900BEB84B /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00E80C482064A6A900BEB84B /* bg.jpg */; };
+		008B2DA82069F046004F81F0 /* bg_iPhoneX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 008B2DA72069F046004F81F0 /* bg_iPhoneX.jpg */; };
+		008B2DAA2069F052004F81F0 /* bg_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 008B2DA92069F052004F81F0 /* bg_normal.jpg */; };
 		7152F8591DF6A96C003F79E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F8581DF6A96C003F79E2 /* main.m */; };
 		7152F85C1DF6A96C003F79E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F85B1DF6A96C003F79E2 /* AppDelegate.m */; };
 		7152F85F1DF6A96C003F79E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F85E1DF6A96C003F79E2 /* ViewController.m */; };
@@ -44,7 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E80C482064A6A900BEB84B /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
+		008B2DA72069F046004F81F0 /* bg_iPhoneX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_iPhoneX.jpg; sourceTree = "<group>"; };
+		008B2DA92069F052004F81F0 /* bg_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_normal.jpg; sourceTree = "<group>"; };
 		7152F8541DF6A96C003F79E2 /* YKBirthdayViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKBirthdayViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7152F8581DF6A96C003F79E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7152F85A1DF6A96C003F79E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -230,7 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				7194F57C1FA2CD41001B4ADF /* birthday.mp3 */,
-				00E80C482064A6A900BEB84B /* bg.jpg */,
+				008B2DA72069F046004F81F0 /* bg_iPhoneX.jpg */,
+				008B2DA92069F052004F81F0 /* bg_normal.jpg */,
 			);
 			path = birthdayAudio;
 			sourceTree = "<group>";
@@ -302,7 +305,8 @@
 				TargetAttributes = {
 					7152F8531DF6A96C003F79E2 = {
 						CreatedOnToolsVersion = 8.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 8R8RTYMXAW;
+						ProvisioningStyle = Manual;
 					};
 					7152F86C1DF6A96C003F79E2 = {
 						CreatedOnToolsVersion = 8.1;
@@ -345,8 +349,9 @@
 				7194F57D1FA2CD41001B4ADF /* birthday.mp3 in Resources */,
 				7152F8641DF6A96C003F79E2 /* Assets.xcassets in Resources */,
 				7152F89B1DF6A9A3003F79E2 /* YKHappyBirthdayViewController.xib in Resources */,
-				00E80C492064A6A900BEB84B /* bg.jpg in Resources */,
+				008B2DAA2069F052004F81F0 /* bg_normal.jpg in Resources */,
 				7152F8621DF6A96C003F79E2 /* Main.storyboard in Resources */,
+				008B2DA82069F046004F81F0 /* bg_iPhoneX.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,10 +533,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8R8RTYMXAW;
 				INFOPLIST_FILE = YKBirthdayViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinker.YKBirthdayViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "88a1de07-87d0-47a1-a5b4-e711d8bb3358";
+				PROVISIONING_PROFILE_SPECIFIER = SimpleFinance_All_Development;
 			};
 			name = Debug;
 		};
@@ -539,10 +548,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = YKBirthdayViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yinker.YKBirthdayViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

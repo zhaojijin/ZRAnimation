@@ -8,7 +8,6 @@
 
 #import "YKBirthdayMgr.h"
 #import "YKAudioPlayerMgr.h"
-#import "YKHappyBirthdayViewController.h"
 
 typedef void(^YKBirthdayControllerHiddenCompelectionBlock)();
 
@@ -30,12 +29,12 @@ static YKBirthdayMgr *birthdayMgr = nil;
     return birthdayMgr;
 }
 
-- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem {
+- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem receiveBlock:(YKBirthdayReceiveActionBlock)receiveBlock {
     __weak typeof(self) weakSelf = self;
     dispatch_block_t block = ^{
         typeof(self) strongSelf = weakSelf;
         if (strongSelf) {
-            [strongSelf showInViewController:viewController birthdayItem:birthdayItem];
+            [strongSelf showInViewController:viewController birthdayItem:birthdayItem receiveBlock:receiveBlock];
         }
     };
     if ([NSThread isMainThread]) {
@@ -45,7 +44,7 @@ static YKBirthdayMgr *birthdayMgr = nil;
     }
 }
 
-- (void)showInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem {
+- (void)showInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem receiveBlock:(YKBirthdayReceiveActionBlock)receiveBlock {
     [self clearBirthdayViewController];
 
     YKHappyBirthdayViewController *birthdayViewController = [[YKHappyBirthdayViewController alloc] initWithNibName:@"YKHappyBirthdayViewController" bundle:nil];
@@ -55,7 +54,9 @@ static YKBirthdayMgr *birthdayMgr = nil;
         typeof(self) strongSelf = weakSelf;
         if (strongSelf) {
             [strongSelf hiddenBirthdayViewController:^{
-                NSLog(@"动画完成后做一些处理");
+                if (receiveBlock) {
+                    receiveBlock();
+                }
             }];
         }
     };

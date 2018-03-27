@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YKHappyBirthdayViewController.h"
 #import <UIKit/UIKit.h>
 #import "YKBirthdayItem.h"
 
@@ -14,7 +15,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem;
+- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(YKBirthdayItem *)birthdayItem receiveBlock:(YKBirthdayReceiveActionBlock)receiveBlock;
 
 - (void)clearBirthdayViewController;
 

@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) IBOutlet UIButton *bgButton;
+
 @end
 
 @implementation ViewController
@@ -18,7 +20,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [UIApplication sharedApplication].statusBarHidden = YES;
+    BOOL iPhoneX = [UIScreen mainScreen].bounds.size.height == 812;
+    NSString *imageName = iPhoneX ? @"bg_iPhoneX.jpg" : @"bg_normal.jpg";
+    [self.bgButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     
     [self showBirthdayViewController];
     
@@ -34,7 +38,9 @@
     birthdayItem.birthdayTitle = @"亲爱的戎马天涯";
     birthdayItem.birthdaySubTitle = @"简理财精心为您准备了3000元";
     birthdayItem.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜！";
-    [[YKBirthdayMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem];
+    [[YKBirthdayMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
+        NSLog(@"动画完成后做一些处理");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
