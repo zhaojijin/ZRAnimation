@@ -3,4 +3,4 @@
 
 效果图如下：
 
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/02.gif)
+![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday1.gif)
