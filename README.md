@@ -14,10 +14,7 @@ birthdayItem.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜�
 [[YKBirthdayMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
    NSLog(@"动画完成后做一些处理");
 }];
-
 ```
-
-
 #### 效果图演示
 
 ![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday1.gif)

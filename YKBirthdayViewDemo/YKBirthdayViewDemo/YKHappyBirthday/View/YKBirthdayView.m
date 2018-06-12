@@ -496,63 +496,63 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 - (UIImage *)birthdayBodyImage {
     if (nil == _birthdayBodyImage) {
-        _birthdayBodyImage = [UIImage imageNamed:@"birthday_body"];
+        _birthdayBodyImage = [UIImage imageNamed:@"birthday_heart_body"];
     }
     return _birthdayBodyImage;
 }
 
 - (UIImage *)birthdayBodyFrontImage {
     if (nil == _birthdayBodyFrontImage) {
-        _birthdayBodyFrontImage = [UIImage imageNamed:@"birthday_body_front"];
+        _birthdayBodyFrontImage = [UIImage imageNamed:@"birthday_heart_body_front"];
     }
     return _birthdayBodyFrontImage;
 }
 
 - (UIImage *)birthdayLidImage {
     if (nil == _birthdayLidImage) {
-        _birthdayLidImage = [UIImage imageNamed:@"birthday_lid"];
+        _birthdayLidImage = [UIImage imageNamed:@"birthday_heart_lid"];
     }
     return _birthdayLidImage;
 }
 
 - (UIImage *)happyBirthdayImage {
     if (nil == _happyBirthdayImage) {
-        _happyBirthdayImage = [UIImage imageNamed:@"birthday_happyBirthday"];
+        _happyBirthdayImage = [UIImage imageNamed:@"birthday_heart_happyBirthday"];
     }
     return _happyBirthdayImage;
 }
 
 - (UIImage *)blingBlingImage {
     if (nil == _blingBlingImage) {
-        _blingBlingImage = [UIImage imageNamed:@"birthday_blingbling"];
+        _blingBlingImage = [UIImage imageNamed:@"birthday_heart_blingbling"];
     }
     return _blingBlingImage;
 }
 
 - (UIImage *)buttonNormalImage {
     if (nil == _buttonNormalImage) {
-        _buttonNormalImage = [UIImage imageNamed:@"birthday_btn_normal"];
+        _buttonNormalImage = [UIImage imageNamed:@"birthday_heart_btn_normal"];
     }
     return _buttonNormalImage;
 }
 
 - (UIImage *)buttonSelectedImage {
     if (nil == _buttonSelectedImage) {
-        _buttonSelectedImage = [UIImage imageNamed:@"birthday_btn_press"];
+        _buttonSelectedImage = [UIImage imageNamed:@"birthday_heart_btn_press"];
     }
     return _buttonSelectedImage;
 }
 
 - (UIImage *)musicNoteImage {
     if (nil == _musicNoteImage) {
-        _musicNoteImage = [UIImage imageNamed:@"birthday_music"];
+        _musicNoteImage = [UIImage imageNamed:@"birthday_heart_music"];
     }
     return _musicNoteImage;
 }
 
 - (UIImage *)musicNoteBlurryImage {
     if (nil == _musicNoteBlurryImage) {
-        _musicNoteBlurryImage = [UIImage imageNamed:@"birthday_music_blurry"];
+        _musicNoteBlurryImage = [UIImage imageNamed:@"birthday_heart_music_blurry"];
     }
     return _musicNoteBlurryImage;
 }
