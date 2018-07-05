@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *const ykBirthdayMusicName = @"birthday.mp3";
+
 @interface YKAudioPlayerMgr : NSObject
 
 + (YKAudioPlayerMgr *)sharedInstance;

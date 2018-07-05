@@ -10,7 +10,7 @@
 #import "YKBirthdayEnvelopeView.h"
 #import "YKBirthdayModel.h"
 #import "YKAudioPlayerMgr.h"
-#import "YKLayerBirthdayMgr.h"
+#import "YKBirthdayEnvelopeMgr.h"
 #import "YKDevice.h"
 
 @interface YKBirthdayViewController ()
@@ -52,7 +52,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     // 动画开始播放音乐
-    [[YKLayerBirthdayMgr shareInstance] playBirthdayMusic];
+    [[YKBirthdayEnvelopeMgr shareInstance] playBirthdayMusic];
     [self.envelopeView startCustomAnimation];
 }
 

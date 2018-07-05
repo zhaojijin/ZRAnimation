@@ -7,9 +7,16 @@
 //
 
 #import "YKBirthdayModel.h"
-#import "YKBirthdayFriendsItem.h"
 
 @implementation YKBirthdayModel
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        self.friendsBirthdayInfo = [NSMutableArray array];
+    }
+    return self;
+}
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
     return @{@"friendsBirthdayInfo" : [YKBirthdayFriendsItem class]};

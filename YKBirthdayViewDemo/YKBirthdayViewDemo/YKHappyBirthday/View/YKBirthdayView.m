@@ -328,7 +328,7 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 // 盒子打开动画
 - (void)animationForBirthdayLid {
     // 动画开始播放音乐
-    [[YKAudioPlayerMgr sharedInstance] playMusic:@"birthday.mp3" isLoops:YES];
+    [[YKAudioPlayerMgr sharedInstance] playMusic:ykBirthdayMusicName isLoops:YES];
     
     // 盒子打开动画路径
     NSMutableArray *values = [NSMutableArray array];

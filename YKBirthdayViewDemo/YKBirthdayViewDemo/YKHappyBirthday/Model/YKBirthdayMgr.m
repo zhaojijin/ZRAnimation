@@ -68,7 +68,7 @@ static YKBirthdayMgr *birthdayMgr = nil;
     [UIView animateWithDuration:0.5 animations:^{
         [YKBirthdayMgr shareInstance].birthdayViewController.view.alpha = 0;
     } completion:^(BOOL finished) {
-        [[YKAudioPlayerMgr sharedInstance] stopMusic:@"birthday.mp3"];
+        [[YKAudioPlayerMgr sharedInstance] stopMusic:ykBirthdayMusicName];
         [self.birthdayViewController removeFromParentViewController];
         [self.birthdayViewController.view removeFromSuperview];
         self.birthdayViewController = nil;
@@ -80,7 +80,7 @@ static YKBirthdayMgr *birthdayMgr = nil;
 
 - (void)clearBirthdayViewController {
     if (self.birthdayViewController) {
-        [[YKAudioPlayerMgr sharedInstance] stopMusic:@"birthday.mp3"];
+        [[YKAudioPlayerMgr sharedInstance] stopMusic:ykBirthdayMusicName];
         [self.birthdayViewController.view removeFromSuperview];
         [self.birthdayViewController removeFromParentViewController];
         self.birthdayViewController = nil;

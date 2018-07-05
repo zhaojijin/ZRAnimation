@@ -35,6 +35,7 @@
     } else {
         self.containerView.hidden = NO;
         self.moreImageView.hidden = YES;
+        
 //        [self.headImageView sd_setImageWithURL:[NSURL URLWithString:friendsItem.imageUrl] placeholderImage:[UIImage imageNamed:@"defaultHeadPicture"]];
         self.nameLabel.text = friendsItem.title;
     }

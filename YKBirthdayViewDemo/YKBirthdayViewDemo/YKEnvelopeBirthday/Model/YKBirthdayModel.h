@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YKBirthdayFriendsItem.h"
 
 typedef NS_ENUM(NSUInteger, YKBirthdayLayerType) {
     YKBirthdayLayerTypeUnknown,
@@ -28,6 +29,6 @@ typedef NS_ENUM(NSUInteger, YKBirthdayDurationStatus) {
 @property (nonatomic, strong) NSString *birthdayLayerName;
 @property (nonatomic, strong) NSString *birthdayLayerDesc;
 @property (nonatomic, assign) YKBirthdayLayerType birthdayLayerType;
-@property (nonatomic, strong) NSArray *friendsBirthdayInfo;
+@property (nonatomic, strong) NSMutableArray <YKBirthdayFriendsItem *>*friendsBirthdayInfo; // 最多三个
 
 @end

@@ -22,7 +22,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-l7-CgZ">
                         <rect key="frame" x="8" y="0.0" width="42" height="75"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-Tm-Q5X">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gao" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-Tm-Q5X">
                                 <rect key="frame" x="0.0" y="10" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qdM-Tm-Q5X" secondAttribute="height" multiplier="1:1" id="MDj-VP-MwC"/>
@@ -80,5 +80,6 @@
     <resources>
         <image name="birthday_envelope_crown" width="26" height="20"/>
         <image name="birthday_envelope_omit" width="23" height="5"/>
+        <image name="gao" width="100" height="100"/>
     </resources>
 </document>
