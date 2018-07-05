@@ -45,7 +45,6 @@
 ```
 #### 效果图演示
 
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday1.gif)    ![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday2.gif)  ![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday3.gif)
-
+![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday1.gif)    ![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday2.gif)
 #### 声明转载请注明出处[https://github.com/zhaojijin/YKBirthdayViewDemo](https://github.com/zhaojijin/YKBirthdayViewDemo)
  
