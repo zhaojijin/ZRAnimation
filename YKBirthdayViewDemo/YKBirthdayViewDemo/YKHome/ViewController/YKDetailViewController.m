@@ -50,6 +50,7 @@
     }
 }
 
+// 心形生日快乐
 - (void)showHeartBirthdayViewController {
     YKBirthdayItem *birthdayItem = [[YKBirthdayItem alloc] init];
     birthdayItem.birthdayTitle = @"亲爱的戎马天涯";
@@ -60,7 +61,7 @@
     }];
 }
 
-
+// 信封生日祝福
 - (void)showEnvelopeBirthdayOneViewController {
     YKBirthdayModel *model = [[YKBirthdayModel alloc] init];
     model.birthdayLayerName = @"亲爱的戎马天涯";
@@ -69,6 +70,7 @@
     [[YKBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
 }
 
+// 信封送好友生日祝福
 - (void)showEnvelopeBirthdayTwoViewController {
     YKBirthdayModel *model = [[YKBirthdayModel alloc] init];
     model.birthdayLayerName = @"亲爱的戎马天涯";
