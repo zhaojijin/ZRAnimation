@@ -26,20 +26,13 @@
 @property (nonatomic, strong) CALayer *musicNoteRightOneLayer;
 @property (nonatomic, strong) CALayer *musicNoteRightTwoLayer;
 
-@property (nonatomic, strong) UIImage *birthdayBodyImage;
-@property (nonatomic, strong) UIImage *birthdayBodyFrontImage;
-@property (nonatomic, strong) UIImage *birthdayLidImage;
-@property (nonatomic, strong) UIImage *birthdayHeartImage;
-@property (nonatomic, strong) UIImage *happyBirthdayImage;
-@property (nonatomic, strong) UIImage *blingBlingImage;
-@property (nonatomic, strong) UIImage *buttonNormalImage;
-@property (nonatomic, strong) UIImage *buttonSelectedImage;
 @property (nonatomic, strong) UIImage *musicNoteImage;
 @property (nonatomic, strong) UIImage *musicNoteBlurryImage;
 
 @property (nonatomic, assign) CGPoint bodyCenterPoint;
 @property (nonatomic, assign) CGFloat bodyRadius;
 @property (nonatomic, assign) CGFloat uiScale;
+@property (nonatomic, assign) CGFloat birthdayHeartHeight;
 
 @property (nonatomic, strong) UIView *containView;
 @property (nonatomic, strong) UILabel *birthdayTitleLabel;
@@ -64,18 +57,10 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 @implementation YKBirthdayView
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
-    if (self) {
-        [self setLayerFrame];
-    }
-    return self;
-}
-
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
-        [self setLayerFrame];
+        [self setupSubviews];
     }
     return self;
 }
@@ -83,31 +68,57 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self setLayerFrame];
+        [self setupSubviews];
     }
     return self;
 }
 
-- (void)setLayerFrame {
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    if (screenWidth > 320.0f) {
-        self.uiScale = 1.0f;
-    } else {
-        self.uiScale = 0.9f;
-    }
+- (void)setupSubviews {
     self.animationList = [NSMutableArray array];
-    self.width = self.birthdayHeartImage.size.width * self.uiScale;
-    CGFloat heartHeight = self.birthdayHeartImage.size.height * self.uiScale;
-    CGRect defaultFrame = CGRectMake(self.width/2, heartHeight, 0, 0);
+    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
+    self.uiScale = screenWidth > 320.0f ? 1.0f : 0.9f;
+    [self setLayerFrame];
+}
+
+- (void)setLayerFrame {
+   
+    UIImage *birthdayHeartImage = [UIImage imageNamed:@"birthday_heart"];
+    self.birthdayHeartHeight = birthdayHeartImage.size.height * self.uiScale;
+    self.width = birthdayHeartImage.size.width * self.uiScale;
+    
+    UIImage *birthdayBodyImage = [UIImage imageNamed:@"birthday_heart_body"];
+    UIImage *birthdayBodyFrontImage = [UIImage imageNamed:@"birthday_heart_body_front"];
+    UIImage *birthdayLidImage = [UIImage imageNamed:@"birthday_heart_lid"];
+    UIImage *happyBirthdayImage = [UIImage imageNamed:@"birthday_heart_happyBirthday"];
+    UIImage *blingBlingImage = [UIImage imageNamed:@"birthday_heart_blingbling"];
+    self.musicNoteImage = [UIImage imageNamed:@"birthday_heart_music"];
+    self.musicNoteBlurryImage = [UIImage imageNamed:@"birthday_heart_music_blurry"];
+    
+    self.birthdayBodyLayer = [self getLayer:birthdayBodyImage];
+    self.birthdayBodyFrontLayer = [self getLayer:birthdayBodyFrontImage];
+    self.birthdayLidLayer = [self getLayer:birthdayLidImage];
+    self.birthdayHeartLayer = [self getLayer:birthdayHeartImage];
+    self.happyBirthdayLayer = [self getLayer:happyBirthdayImage];
+    self.blingBlingLayer = [self getLayer:blingBlingImage];
+    self.musicNoteLeftLayer = [self getLayer:self.musicNoteImage];
+    self.musicNoteRightOneLayer = [self getLayer:self.musicNoteBlurryImage];
+    self.musicNoteRightTwoLayer = [self getLayer:self.musicNoteImage];
+    self.animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    self.containView = [[UIView alloc] init];
+    self.containView.backgroundColor = [UIColor clearColor];
+    self.containView.alpha = 0;
+
+    CGRect defaultFrame = CGRectMake(self.width/2, self.birthdayHeartHeight, 0, 0);
     CGPoint defaultAnchorPoint = CGPointMake(0.5, 1);
     
     self.birthdayHeartLayer.anchorPoint = defaultAnchorPoint;
     self.birthdayHeartLayer.frame = defaultFrame;
     
-    CGFloat lidWidth = self.birthdayLidImage.size.width * self.uiScale;
-    CGFloat lidHeight = self.birthdayLidImage.size.height * self.uiScale;
+    CGFloat lidWidth = birthdayLidImage.size.width * self.uiScale;
+    CGFloat lidHeight = birthdayLidImage.size.height * self.uiScale;
     CGFloat lidOriginX = self.width/2 - lidWidth/2;
-    CGFloat lidOriginY = heartHeight-54 * self.uiScale;
+    CGFloat lidOriginY = self.birthdayHeartHeight-54 * self.uiScale;
     self.birthdayLidLayer.frame = CGRectMake(lidOriginX, lidOriginY, lidWidth, lidHeight);
     
     self.happyBirthdayLayer.anchorPoint = defaultAnchorPoint;
@@ -116,8 +127,8 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     self.blingBlingLayer.anchorPoint = defaultAnchorPoint;
     self.blingBlingLayer.frame = defaultFrame;
     
-    CGFloat bodyWidth = self.birthdayBodyImage.size.width * self.uiScale;
-    CGFloat bodyHeight = self.birthdayBodyImage.size.height * self.uiScale;
+    CGFloat bodyWidth = birthdayBodyImage.size.width * self.uiScale;
+    CGFloat bodyHeight = birthdayBodyImage.size.height * self.uiScale;
     self.birthdayBodyLayer.frame = CGRectMake(lidOriginX, CGRectGetMaxY(self.birthdayLidLayer.frame)-22, bodyWidth, bodyHeight);
     
     self.birthdayBodyFrontLayer.frame = self.birthdayBodyLayer.frame;
@@ -127,10 +138,9 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     self.bodyCenterPoint = CGPointMake(self.width/2, self.birthdayBodyLayer.frame.origin.y + bodyHeight/2 - 8);
     self.bodyRadius = bodyHeight/2;
 
-    CGFloat birthdayHeartHeight = self.birthdayHeartImage.size.height * self.uiScale;
     CGFloat musicW = self.musicNoteImage.size.width *self.uiScale;
     CGFloat musicH = self.musicNoteImage.size.height *self.uiScale;
-    CGRect musicOrginFrame = CGRectMake((self.width-musicW)/2, birthdayHeartHeight, musicW, musicH);
+    CGRect musicOrginFrame = CGRectMake((self.width-musicW)/2, self.birthdayHeartHeight, musicW, musicH);
     
     // 音符起始位置
     self.musicNoteLeftLayer.frame = musicOrginFrame;
@@ -142,13 +152,13 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     CATransform3D transform3D = CATransform3DMakeAffineTransform(transform);
     self.musicNoteLeftLayer.transform = transform3D;
     
-    // 添加layer
+    // 添加layer 注意顺序
     [self.layer addSublayer:self.birthdayBodyLayer];
     [self.layer addSublayer:self.birthdayHeartLayer];
     [self.layer addSublayer:self.happyBirthdayLayer];
     [self.layer addSublayer:self.blingBlingLayer];
     
-    [self configContainView:heartHeight];
+    [self configContainView:self.birthdayHeartHeight];
     
     [self.layer addSublayer:self.musicNoteLeftLayer];
     [self.layer addSublayer:self.musicNoteRightOneLayer];
@@ -179,14 +189,20 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     self.birthdayDescriptionLabel = [self getLabel:descriptionFrame text:self.birthdayDescritpion];
     [self.containView addSubview:self.birthdayDescriptionLabel];
 
-    CGFloat receiveButtonW = self.buttonSelectedImage.size.width * self.uiScale;
-    CGFloat receiveButtonH = self.buttonSelectedImage.size.height * self.uiScale;
+    [self setupReceiveButton];
+}
+
+- (void)setupReceiveButton {
+    UIImage *buttonNormalImage = [UIImage imageNamed:@"birthday_heart_btn_normal"];
+    UIImage *buttonSelectedImage = [UIImage imageNamed:@"birthday_heart_btn_press"];
+    CGFloat receiveButtonW = buttonSelectedImage.size.width * self.uiScale;
+    CGFloat receiveButtonH = buttonSelectedImage.size.height * self.uiScale;
     UIButton *receiveButton = [UIButton buttonWithType:UIButtonTypeCustom];
     receiveButton.frame = CGRectMake(0, 0, receiveButtonW, receiveButtonH);
     receiveButton.center = CGPointMake(self.width/2, CGRectGetMaxY(self.birthdayDescriptionLabel.frame)+receiveButtonH/2 + 10*self.uiScale);
-    [receiveButton setImage:self.buttonNormalImage forState:UIControlStateNormal];
-    [receiveButton setImage:self.buttonSelectedImage forState:UIControlStateSelected];
-    [receiveButton setImage:self.buttonSelectedImage forState:UIControlStateHighlighted];
+    [receiveButton setImage:buttonNormalImage forState:UIControlStateNormal];
+    [receiveButton setImage:buttonSelectedImage forState:UIControlStateSelected];
+    [receiveButton setImage:buttonSelectedImage forState:UIControlStateHighlighted];
     [receiveButton addTarget:self action:@selector(receiveButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     receiveButton.alpha = 0;
     self.receiveButton = receiveButton;
@@ -210,7 +226,6 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 }
 
 - (void)receiveButtonAction:(id)sender {
-    
     if (self.receiveActionBlock) {
         self.receiveActionBlock();
     }
@@ -220,8 +235,7 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 - (void)animationForBirthdayHeart {
     
-    CGFloat heartHeight = self.birthdayHeartImage.size.height * self.uiScale;
-    CGRect topLayerFrame = CGRectMake(0, 0, self.width, heartHeight);
+    CGRect topLayerFrame = CGRectMake(0, 0, self.width, self.birthdayHeartHeight);
     self.birthdayHeartLayer.frame = topLayerFrame;
     self.happyBirthdayLayer.frame = topLayerFrame;
     self.blingBlingLayer.frame = topLayerFrame;
@@ -253,13 +267,11 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 // 三个音符的动画
 - (void)animationForBirthdayMusic {
-
-    CGFloat birthdayHeartHeight = self.birthdayHeartImage.size.height * self.uiScale;
     
     CGFloat musicW = self.musicNoteImage.size.width *self.uiScale;
     CGFloat musicH = self.musicNoteImage.size.height *self.uiScale;
     
-    CGPoint originPoint = CGPointMake(self.width/2, birthdayHeartHeight + musicH/2);
+    CGPoint originPoint = CGPointMake(self.width/2, self.birthdayHeartHeight + musicH/2);
     
     CGPoint leftEndPoint = CGPointMake(40 *self.uiScale + musicW/2, -70 *self.uiScale + musicH/2);
     CGPoint rightOneEndPoint = CGPointMake(168 *self.uiScale + musicW/2, -120 *self.uiScale + musicH/2);
@@ -483,157 +495,6 @@ static inline CGFloat YKDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     [subLayer removeAllAnimations];
     [subLayer removeFromSuperlayer];
     subLayer = nil;
-}
-
-#pragma mark - getter
-
-- (UIImage *)birthdayHeartImage {
-    if (nil == _birthdayHeartImage) {
-        _birthdayHeartImage = [UIImage imageNamed:@"birthday_heart"];
-    }
-    return _birthdayHeartImage;
-}
-
-- (UIImage *)birthdayBodyImage {
-    if (nil == _birthdayBodyImage) {
-        _birthdayBodyImage = [UIImage imageNamed:@"birthday_heart_body"];
-    }
-    return _birthdayBodyImage;
-}
-
-- (UIImage *)birthdayBodyFrontImage {
-    if (nil == _birthdayBodyFrontImage) {
-        _birthdayBodyFrontImage = [UIImage imageNamed:@"birthday_heart_body_front"];
-    }
-    return _birthdayBodyFrontImage;
-}
-
-- (UIImage *)birthdayLidImage {
-    if (nil == _birthdayLidImage) {
-        _birthdayLidImage = [UIImage imageNamed:@"birthday_heart_lid"];
-    }
-    return _birthdayLidImage;
-}
-
-- (UIImage *)happyBirthdayImage {
-    if (nil == _happyBirthdayImage) {
-        _happyBirthdayImage = [UIImage imageNamed:@"birthday_heart_happyBirthday"];
-    }
-    return _happyBirthdayImage;
-}
-
-- (UIImage *)blingBlingImage {
-    if (nil == _blingBlingImage) {
-        _blingBlingImage = [UIImage imageNamed:@"birthday_heart_blingbling"];
-    }
-    return _blingBlingImage;
-}
-
-- (UIImage *)buttonNormalImage {
-    if (nil == _buttonNormalImage) {
-        _buttonNormalImage = [UIImage imageNamed:@"birthday_heart_btn_normal"];
-    }
-    return _buttonNormalImage;
-}
-
-- (UIImage *)buttonSelectedImage {
-    if (nil == _buttonSelectedImage) {
-        _buttonSelectedImage = [UIImage imageNamed:@"birthday_heart_btn_press"];
-    }
-    return _buttonSelectedImage;
-}
-
-- (UIImage *)musicNoteImage {
-    if (nil == _musicNoteImage) {
-        _musicNoteImage = [UIImage imageNamed:@"birthday_heart_music"];
-    }
-    return _musicNoteImage;
-}
-
-- (UIImage *)musicNoteBlurryImage {
-    if (nil == _musicNoteBlurryImage) {
-        _musicNoteBlurryImage = [UIImage imageNamed:@"birthday_heart_music_blurry"];
-    }
-    return _musicNoteBlurryImage;
-}
-
-- (CALayer *)birthdayBodyLayer {
-    if (nil == _birthdayBodyLayer) {
-        _birthdayBodyLayer = [self getLayer:self.birthdayBodyImage];
-    }
-    return _birthdayBodyLayer;
-}
-
-- (CALayer *)birthdayBodyFrontLayer {
-    if (nil == _birthdayBodyFrontLayer) {
-        _birthdayBodyFrontLayer = [self getLayer:self.birthdayBodyFrontImage];
-    }
-    return _birthdayBodyFrontLayer;
-}
-
-- (CALayer *)birthdayLidLayer {
-    if (nil == _birthdayLidLayer) {
-        _birthdayLidLayer = [self getLayer:self.birthdayLidImage];
-    }
-    return _birthdayLidLayer;
-}
-
-- (CALayer *)birthdayHeartLayer {
-    if (nil == _birthdayHeartLayer) {
-        _birthdayHeartLayer = [self getLayer:self.birthdayHeartImage];
-    }
-    return _birthdayHeartLayer;
-}
-
-- (CALayer *)happyBirthdayLayer {
-    if (nil == _happyBirthdayLayer) {
-        _happyBirthdayLayer = [self getLayer:self.happyBirthdayImage];
-    }
-    return _happyBirthdayLayer;
-}
-
-- (CALayer *)blingBlingLayer {
-    if (nil == _blingBlingLayer) {
-        _blingBlingLayer = [self getLayer:self.blingBlingImage];
-    }
-    return _blingBlingLayer;
-}
-
-- (CALayer *)musicNoteLeftLayer {
-    if (nil == _musicNoteLeftLayer) {
-        _musicNoteLeftLayer = [self getLayer:self.musicNoteImage];
-    }
-    return _musicNoteLeftLayer;
-}
-
-- (CALayer *)musicNoteRightOneLayer {
-    if (nil == _musicNoteRightOneLayer) {
-        _musicNoteRightOneLayer = [self getLayer:self.musicNoteBlurryImage];
-    }
-    return _musicNoteRightOneLayer;
-}
-
-- (CALayer *)musicNoteRightTwoLayer {
-    if (nil == _musicNoteRightTwoLayer) {
-        _musicNoteRightTwoLayer = [self getLayer:self.musicNoteImage];
-    }
-    return _musicNoteRightTwoLayer;
-}
-
-- (CAMediaTimingFunction *)animationTimingFunction {
-    if (nil == _animationTimingFunction) {
-        _animationTimingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    }
-    return _animationTimingFunction;
-}
-
-- (UIView *)containView {
-    if (nil == _containView) {
-        _containView = [[UIView alloc] init];
-        _containView.backgroundColor = [UIColor clearColor];
-        _containView.alpha = 0;
-    }
-    return _containView;
 }
 
 @end
