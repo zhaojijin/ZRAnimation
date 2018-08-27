@@ -21,10 +21,10 @@
                 model.title = @"心形生日祝福";
                 model.birthdayType = YKBirthdayTypeHeart;
             } else if (i == 1) {
-                model.title = @"打开信封动画生日祝福①";
+                model.title = @"打开信封生日祝福①";
                 model.birthdayType = YKBirthdayTypeEnvelopeOne;
             } else if (i == 2) {
-                model.title = @"打开信封动画生日祝福②";
+                model.title = @"打开信封生日祝福②";
                 model.birthdayType = YKBirthdayTypeEnvelopeTwo;
             }
             [self.itemList addObject:model];
