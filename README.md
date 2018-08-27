@@ -1,5 +1,9 @@
 # YKBirthdayViewDemo
 
+#### 效果演示
+
+![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday2.gif)
+
 #### 应用场景
 
 项目中用户过生日时做活动用的native展示部分
@@ -43,8 +47,5 @@
 }
 
 ```
-#### 效果图演示
-
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday2.gif)
 #### 声明转载请注明出处[https://github.com/zhaojijin/YKBirthdayViewDemo](https://github.com/zhaojijin/YKBirthdayViewDemo)
  
