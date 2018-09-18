@@ -15,7 +15,7 @@
 - (void)showHeartBirthdayViewController {
     YKBirthdayItem *birthdayItem = [[YKBirthdayItem alloc] init];
     birthdayItem.birthdayTitle = @"亲爱的戎马天涯";
-    birthdayItem.birthdaySubTitle = @"简理财精心为您准备了3000元";
+    birthdayItem.birthdaySubTitle = @"我公司精心为您准备了3000元";
     birthdayItem.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜！";
     [[YKBirthdayMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
         NSLog(@"动画完成后做一些处理");
@@ -26,7 +26,7 @@
 - (void)showEnvelopeBirthdayOneViewController {
     YKBirthdayModel *model = [[YKBirthdayModel alloc] init];
     model.birthdayLayerName = @"亲爱的戎马天涯";
-    model.birthdayLayerDesc = @"简理财精心为您准备了3000元生日礼金，赶快来领取吧";
+    model.birthdayLayerDesc = @"我公司精心为您准备了3000元生日礼金，赶快来领取吧";
     model.birthdayLayerType = YKBirthdayLayerTypeForA;
     [[YKBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
 }
