@@ -9,11 +9,12 @@
 #ifndef YKBaseDefined_h
 #define YKBaseDefined_h
 
-typedef NS_ENUM(NSUInteger, YKBirthdayType) {
-    YKBirthdayTypeUnknown,
-    YKBirthdayTypeHeart,
-    YKBirthdayTypeEnvelopeOne,
-    YKBirthdayTypeEnvelopeTwo
+typedef NS_ENUM(NSUInteger, YKAnimationType) {
+    YKAnimationTypeUnknown,
+    YKAnimationTypeHeart,
+    YKAnimationTypeEnvelopeOne,
+    YKAnimationTypeEnvelopeTwo,
+    YKAnimationTypeCardDance
 };
 
 #endif /* YKBaseDefined_h */

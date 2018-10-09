@@ -7,13 +7,14 @@
 //
 
 #import "YKHomeViewController.h"
-#import "YKBirthdayAdapter.h"
-#import "YKDetailViewController.h"
+#import "YKHomeAdapter.h"
+#import "YKHomeBirthdayDetailViewController.h"
+#import "ZRCardDanceViewController.h"
 
 @interface YKHomeViewController ()
 
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) YKBirthdayAdapter *birthdyaAdapter;
+@property (nonatomic, strong) YKHomeAdapter *birthdyaAdapter;
 
 @end
 
@@ -26,19 +27,33 @@
 }
 
 - (void)setupSubviews {
-    self.birthdyaAdapter = [[YKBirthdayAdapter alloc] init];
+    self.birthdyaAdapter = [[YKHomeAdapter alloc] init];
     [self.birthdyaAdapter addDelegate:self.tableView];
     __weak  typeof(self) weakSelf  = self;
-    self.birthdyaAdapter.birthdayClickBlock = ^(YKBirthdayType birthdayType) {
+    self.birthdyaAdapter.birthdayClickBlock = ^(YKAnimationType birthdayType) {
         [weakSelf handleJumpDetailEvent:birthdayType];
     };
     self.title = @"首页";
 }
 
-- (void)handleJumpDetailEvent:(YKBirthdayType)birthdayType {
-    YKDetailViewController *vc = [[YKDetailViewController alloc] initWithNibName:@"YKDetailViewController" bundle:nil];
-    vc.birthdayType = birthdayType;
-    [self.navigationController pushViewController:vc animated:YES];
+- (void)handleJumpDetailEvent:(YKAnimationType)birthdayType {
+    switch (birthdayType) {
+        case YKAnimationTypeHeart:
+        case YKAnimationTypeEnvelopeOne:
+        case YKAnimationTypeEnvelopeTwo: {
+            YKHomeBirthdayDetailViewController *vc = [[YKHomeBirthdayDetailViewController alloc] initWithNibName:@"YKHomeBirthdayDetailViewController" bundle:nil];
+            vc.birthdayType = birthdayType;
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+        case YKAnimationTypeCardDance: {
+            ZRCardDanceViewController *cardDanceViewController = [[ZRCardDanceViewController alloc] initWithNibName:@"ZRCardDanceViewController" bundle:nil];
+            [self.navigationController pushViewController:cardDanceViewController animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

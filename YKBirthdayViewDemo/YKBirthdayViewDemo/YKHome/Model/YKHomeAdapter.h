@@ -9,8 +9,8 @@
 #import "YKTableViewBaseAdapter.h"
 #import "YKBaseDefined.h"
 
-@interface YKBirthdayAdapter : YKTableViewBaseAdapter
+@interface YKHomeAdapter : YKTableViewBaseAdapter
 
-@property (nonatomic, copy) void(^birthdayClickBlock)(YKBirthdayType birthdayType);
+@property (nonatomic, copy) void(^birthdayClickBlock)(YKAnimationType birthdayType);
 
 @end

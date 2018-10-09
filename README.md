@@ -2,7 +2,8 @@
 
 #### 效果演示
 
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday2.gif)
+![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday.gif)
+![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/CardDance.gif)
 
 #### 应用场景
 
@@ -46,6 +47,17 @@
     [[YKBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
 }
 
+// 简单卡片翻转动画
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // 可根据业务需求来自定义Model，在ZRCardDanceFrontView和ZRCardDanceReverseSideView中自定义UI
+    ZRCardDanceView *cardDanceView = [[ZRCardDanceView alloc] initWithFrame:CGRectMake(0, 0, 172.5, 250) model:nil];
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    cardDanceView.center = CGPointMake(screenSize.width/2, screenSize.height/2);
+    [self.view addSubview:cardDanceView];
+}
+
 ```
+<font color = red>有任何感觉不妥的地方请您给出宝贵的意见，谢谢！</font>
 #### 声明转载请注明出处[https://github.com/zhaojijin/YKBirthdayViewDemo](https://github.com/zhaojijin/YKBirthdayViewDemo)
  

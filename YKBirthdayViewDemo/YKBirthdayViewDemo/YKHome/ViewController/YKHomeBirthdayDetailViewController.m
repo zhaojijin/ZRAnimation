@@ -6,19 +6,19 @@
 //  Copyright © 2018年 yinker. All rights reserved.
 //
 
-#import "YKDetailViewController.h"
+#import "YKHomeBirthdayDetailViewController.h"
 #import "YKBirthdayMgr.h"
 #import "YKBirthdayEnvelopeMgr.h"
 #import "YKBirthdayModel.h"
 #import "YKAudioPlayerMgr.h"
 
-@interface YKDetailViewController ()
+@interface YKHomeBirthdayDetailViewController ()
 
 @property (nonatomic, strong) IBOutlet UIButton *bgButton;
 
 @end
 
-@implementation YKDetailViewController
+@implementation YKHomeBirthdayDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,13 +36,13 @@
 
 - (IBAction)actionEvent:(id)sender {
     switch (self.birthdayType) {
-        case YKBirthdayTypeHeart:
+        case YKAnimationTypeHeart:
             [self showHeartBirthdayViewController];
             break;
-        case YKBirthdayTypeEnvelopeOne:
+        case YKAnimationTypeEnvelopeOne:
             [self showEnvelopeBirthdayOneViewController];
             break;
-        case YKBirthdayTypeEnvelopeTwo:
+        case YKAnimationTypeEnvelopeTwo:
             [self showEnvelopeBirthdayTwoViewController];
             break;
         default:

@@ -6,27 +6,27 @@
 //  Copyright © 2018年 yinker. All rights reserved.
 //
 
-#import "YKBirthdayAdapter.h"
+#import "YKHomeAdapter.h"
 #import "YKHomeModel.h"
 
-@implementation YKBirthdayAdapter
+@implementation YKHomeAdapter
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         // 初始化数据
-        for (NSInteger i = 0; i < 3; ++i) {
+        for (NSInteger i = 0; i < 4; ++i) {
             YKHomeModel * model = [YKHomeModel new];
             if (i == 0) {
                 model.title = @"心形生日祝福";
-                model.birthdayType = YKBirthdayTypeHeart;
             } else if (i == 1) {
                 model.title = @"打开信封生日祝福①";
-                model.birthdayType = YKBirthdayTypeEnvelopeOne;
             } else if (i == 2) {
                 model.title = @"打开信封生日祝福②";
-                model.birthdayType = YKBirthdayTypeEnvelopeTwo;
+            } else if (i == 3) {
+                model.title = @"卡片翻转动画";
             }
+            model.birthdayType = i+1;
             [self.itemList addObject:model];
         }
     }

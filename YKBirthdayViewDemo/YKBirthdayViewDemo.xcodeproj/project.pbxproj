@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0027329E20EB526F0056EA0A /* YKTableViewBaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0027329C20EB526F0056EA0A /* YKTableViewBaseAdapter.m */; };
-		002732C220EB54150056EA0A /* YKBirthdayAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732B920EB54150056EA0A /* YKBirthdayAdapter.m */; };
-		002732C420EB54150056EA0A /* YKDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002732BF20EB54150056EA0A /* YKDetailViewController.xib */; };
-		002732C520EB54150056EA0A /* YKDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732C020EB54150056EA0A /* YKDetailViewController.m */; };
+		002732C220EB54150056EA0A /* YKHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732B920EB54150056EA0A /* YKHomeAdapter.m */; };
+		002732C420EB54150056EA0A /* YKHomeBirthdayDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002732BF20EB54150056EA0A /* YKHomeBirthdayDetailViewController.xib */; };
+		002732C520EB54150056EA0A /* YKHomeBirthdayDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732C020EB54150056EA0A /* YKHomeBirthdayDetailViewController.m */; };
 		002732C820EB54480056EA0A /* YKHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732C720EB54480056EA0A /* YKHomeModel.m */; };
 		002732CD20EB5A080056EA0A /* YKHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 002732CB20EB5A080056EA0A /* YKHomeViewController.m */; };
 		002732CE20EB5A080056EA0A /* YKHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 002732CC20EB5A080056EA0A /* YKHomeViewController.xib */; };
@@ -28,6 +28,13 @@
 		008B2DCC206A4F12004F81F0 /* YKBirthdayEnvelopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 008B2DC3206A4F12004F81F0 /* YKBirthdayEnvelopeView.m */; };
 		008B2DCF206A51F6004F81F0 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 008B2DCE206A51F6004F81F0 /* UIImage+Rotate.m */; };
 		008B2DD2206A53AA004F81F0 /* YKDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 008B2DD1206A53AA004F81F0 /* YKDevice.m */; };
+		00B5AAA9216C7E0400CFF79C /* ZRCardDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAA7216C7E0400CFF79C /* ZRCardDanceViewController.m */; };
+		00B5AAAA216C7E0400CFF79C /* ZRCardDanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00B5AAA8216C7E0400CFF79C /* ZRCardDanceViewController.xib */; };
+		00B5AAAD216C7E4200CFF79C /* ZRCardDanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAAC216C7E4200CFF79C /* ZRCardDanceView.m */; };
+		00B5AAB0216C7E5500CFF79C /* ZRCardDanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAAF216C7E5500CFF79C /* ZRCardDanceModel.m */; };
+		00B5AAB3216C829600CFF79C /* ZRCardDanceFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAB2216C829600CFF79C /* ZRCardDanceFrontView.m */; };
+		00B5AAB6216C82BD00CFF79C /* ZRCardDanceReverseSideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAB5216C82BD00CFF79C /* ZRCardDanceReverseSideView.m */; };
+		00B5AAB9216C8B9900CFF79C /* ZRCardDanceBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AAB8216C8B9900CFF79C /* ZRCardDanceBaseView.m */; };
 		7152F8591DF6A96C003F79E2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F8581DF6A96C003F79E2 /* main.m */; };
 		7152F85C1DF6A96C003F79E2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7152F85B1DF6A96C003F79E2 /* AppDelegate.m */; };
 		7152F8621DF6A96C003F79E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7152F8601DF6A96C003F79E2 /* Main.storyboard */; };
@@ -64,11 +71,11 @@
 /* Begin PBXFileReference section */
 		0027329C20EB526F0056EA0A /* YKTableViewBaseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKTableViewBaseAdapter.m; sourceTree = "<group>"; };
 		0027329D20EB526F0056EA0A /* YKTableViewBaseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKTableViewBaseAdapter.h; sourceTree = "<group>"; };
-		002732B920EB54150056EA0A /* YKBirthdayAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKBirthdayAdapter.m; sourceTree = "<group>"; };
-		002732BA20EB54150056EA0A /* YKBirthdayAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKBirthdayAdapter.h; sourceTree = "<group>"; };
-		002732BD20EB54150056EA0A /* YKDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKDetailViewController.h; sourceTree = "<group>"; };
-		002732BF20EB54150056EA0A /* YKDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKDetailViewController.xib; sourceTree = "<group>"; };
-		002732C020EB54150056EA0A /* YKDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKDetailViewController.m; sourceTree = "<group>"; };
+		002732B920EB54150056EA0A /* YKHomeAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeAdapter.m; sourceTree = "<group>"; };
+		002732BA20EB54150056EA0A /* YKHomeAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeAdapter.h; sourceTree = "<group>"; };
+		002732BD20EB54150056EA0A /* YKHomeBirthdayDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKHomeBirthdayDetailViewController.h; sourceTree = "<group>"; };
+		002732BF20EB54150056EA0A /* YKHomeBirthdayDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YKHomeBirthdayDetailViewController.xib; sourceTree = "<group>"; };
+		002732C020EB54150056EA0A /* YKHomeBirthdayDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKHomeBirthdayDetailViewController.m; sourceTree = "<group>"; };
 		002732C620EB54480056EA0A /* YKHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKHomeModel.h; sourceTree = "<group>"; };
 		002732C720EB54480056EA0A /* YKHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKHomeModel.m; sourceTree = "<group>"; };
 		002732C920EB549B0056EA0A /* YKBaseDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKBaseDefined.h; sourceTree = "<group>"; };
@@ -98,6 +105,19 @@
 		008B2DCE206A51F6004F81F0 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
 		008B2DD0206A53AA004F81F0 /* YKDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YKDevice.h; sourceTree = "<group>"; };
 		008B2DD1206A53AA004F81F0 /* YKDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YKDevice.m; sourceTree = "<group>"; };
+		00B5AAA6216C7E0400CFF79C /* ZRCardDanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceViewController.h; sourceTree = "<group>"; };
+		00B5AAA7216C7E0400CFF79C /* ZRCardDanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceViewController.m; sourceTree = "<group>"; };
+		00B5AAA8216C7E0400CFF79C /* ZRCardDanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRCardDanceViewController.xib; sourceTree = "<group>"; };
+		00B5AAAB216C7E4200CFF79C /* ZRCardDanceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceView.h; sourceTree = "<group>"; };
+		00B5AAAC216C7E4200CFF79C /* ZRCardDanceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceView.m; sourceTree = "<group>"; };
+		00B5AAAE216C7E5500CFF79C /* ZRCardDanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceModel.h; sourceTree = "<group>"; };
+		00B5AAAF216C7E5500CFF79C /* ZRCardDanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceModel.m; sourceTree = "<group>"; };
+		00B5AAB1216C829600CFF79C /* ZRCardDanceFrontView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceFrontView.h; sourceTree = "<group>"; };
+		00B5AAB2216C829600CFF79C /* ZRCardDanceFrontView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceFrontView.m; sourceTree = "<group>"; };
+		00B5AAB4216C82BD00CFF79C /* ZRCardDanceReverseSideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceReverseSideView.h; sourceTree = "<group>"; };
+		00B5AAB5216C82BD00CFF79C /* ZRCardDanceReverseSideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceReverseSideView.m; sourceTree = "<group>"; };
+		00B5AAB7216C8B9900CFF79C /* ZRCardDanceBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceBaseView.h; sourceTree = "<group>"; };
+		00B5AAB8216C8B9900CFF79C /* ZRCardDanceBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceBaseView.m; sourceTree = "<group>"; };
 		7152F8541DF6A96C003F79E2 /* YKBirthdayViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YKBirthdayViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7152F8581DF6A96C003F79E2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7152F85A1DF6A96C003F79E2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -174,8 +194,8 @@
 		002732B820EB54150056EA0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				002732BA20EB54150056EA0A /* YKBirthdayAdapter.h */,
-				002732B920EB54150056EA0A /* YKBirthdayAdapter.m */,
+				002732BA20EB54150056EA0A /* YKHomeAdapter.h */,
+				002732B920EB54150056EA0A /* YKHomeAdapter.m */,
 				002732C620EB54480056EA0A /* YKHomeModel.h */,
 				002732C720EB54480056EA0A /* YKHomeModel.m */,
 			);
@@ -192,9 +212,9 @@
 		002732BC20EB54150056EA0A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				002732BD20EB54150056EA0A /* YKDetailViewController.h */,
-				002732C020EB54150056EA0A /* YKDetailViewController.m */,
-				002732BF20EB54150056EA0A /* YKDetailViewController.xib */,
+				002732BD20EB54150056EA0A /* YKHomeBirthdayDetailViewController.h */,
+				002732C020EB54150056EA0A /* YKHomeBirthdayDetailViewController.m */,
+				002732BF20EB54150056EA0A /* YKHomeBirthdayDetailViewController.xib */,
 				002732CA20EB5A080056EA0A /* YKHomeViewController.h */,
 				002732CB20EB5A080056EA0A /* YKHomeViewController.m */,
 				002732CC20EB5A080056EA0A /* YKHomeViewController.xib */,
@@ -251,6 +271,50 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		00B5AAA2216C7DD500CFF79C /* ZRCardDance */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AAA3216C7DD500CFF79C /* Model */,
+				00B5AAA4216C7DD500CFF79C /* View */,
+				00B5AAA5216C7DD500CFF79C /* ViewController */,
+			);
+			path = ZRCardDance;
+			sourceTree = "<group>";
+		};
+		00B5AAA3216C7DD500CFF79C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AAAE216C7E5500CFF79C /* ZRCardDanceModel.h */,
+				00B5AAAF216C7E5500CFF79C /* ZRCardDanceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00B5AAA4216C7DD500CFF79C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AAAB216C7E4200CFF79C /* ZRCardDanceView.h */,
+				00B5AAAC216C7E4200CFF79C /* ZRCardDanceView.m */,
+				00B5AAB7216C8B9900CFF79C /* ZRCardDanceBaseView.h */,
+				00B5AAB8216C8B9900CFF79C /* ZRCardDanceBaseView.m */,
+				00B5AAB1216C829600CFF79C /* ZRCardDanceFrontView.h */,
+				00B5AAB2216C829600CFF79C /* ZRCardDanceFrontView.m */,
+				00B5AAB4216C82BD00CFF79C /* ZRCardDanceReverseSideView.h */,
+				00B5AAB5216C82BD00CFF79C /* ZRCardDanceReverseSideView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00B5AAA5216C7DD500CFF79C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AAA6216C7E0400CFF79C /* ZRCardDanceViewController.h */,
+				00B5AAA7216C7E0400CFF79C /* ZRCardDanceViewController.m */,
+				00B5AAA8216C7E0400CFF79C /* ZRCardDanceViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7152F84B1DF6A96C003F79E2 = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +342,7 @@
 				7194F5711FA2CAC0001B4ADF /* YKBaseLib */,
 				7152F88A1DF6A9A3003F79E2 /* YKHappyBirthday */,
 				008B2DB0206A4F12004F81F0 /* YKEnvelopeBirthday */,
+				00B5AAA2216C7DD500CFF79C /* ZRCardDance */,
 				002732B720EB54150056EA0A /* YKHome */,
 				7152F85A1DF6A96C003F79E2 /* AppDelegate.h */,
 				7152F85B1DF6A96C003F79E2 /* AppDelegate.m */,
@@ -497,7 +562,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7152F8671DF6A96C003F79E2 /* LaunchScreen.storyboard in Resources */,
-				002732C420EB54150056EA0A /* YKDetailViewController.xib in Resources */,
+				002732C420EB54150056EA0A /* YKHomeBirthdayDetailViewController.xib in Resources */,
+				00B5AAAA216C7E0400CFF79C /* ZRCardDanceViewController.xib in Resources */,
 				7194F57D1FA2CD41001B4ADF /* birthday.mp3 in Resources */,
 				7152F89B1DF6A9A3003F79E2 /* YKHappyBirthdayViewController.xib in Resources */,
 				008B2DAA2069F052004F81F0 /* bg_normal.jpg in Resources */,
@@ -532,6 +598,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				008B2DC7206A4F12004F81F0 /* YKBirthdayEnvelopeMgr.m in Sources */,
+				00B5AAB0216C7E5500CFF79C /* ZRCardDanceModel.m in Sources */,
+				00B5AAB3216C829600CFF79C /* ZRCardDanceFrontView.m in Sources */,
 				008B2DC8206A4F12004F81F0 /* YKBirthdayFriendsItem.m in Sources */,
 				002732CD20EB5A080056EA0A /* YKHomeViewController.m in Sources */,
 				7152F8991DF6A9A3003F79E2 /* YKBirthdayView.m in Sources */,
@@ -539,12 +607,14 @@
 				7152F8981DF6A9A3003F79E2 /* YKBirthdayMgr.m in Sources */,
 				7152F8971DF6A9A3003F79E2 /* YKBirthdayItem.m in Sources */,
 				002732C820EB54480056EA0A /* YKHomeModel.m in Sources */,
+				00B5AAAD216C7E4200CFF79C /* ZRCardDanceView.m in Sources */,
 				008B2DD2206A53AA004F81F0 /* YKDevice.m in Sources */,
-				002732C220EB54150056EA0A /* YKBirthdayAdapter.m in Sources */,
+				002732C220EB54150056EA0A /* YKHomeAdapter.m in Sources */,
+				00B5AAA9216C7E0400CFF79C /* ZRCardDanceViewController.m in Sources */,
 				7152F85C1DF6A96C003F79E2 /* AppDelegate.m in Sources */,
 				008B2DCC206A4F12004F81F0 /* YKBirthdayEnvelopeView.m in Sources */,
 				008B2DCA206A4F12004F81F0 /* YKBirthdayUserDescView.m in Sources */,
-				002732C520EB54150056EA0A /* YKDetailViewController.m in Sources */,
+				002732C520EB54150056EA0A /* YKHomeBirthdayDetailViewController.m in Sources */,
 				7152F8591DF6A96C003F79E2 /* main.m in Sources */,
 				008B2DC6206A4F12004F81F0 /* YKBirthdayModel.m in Sources */,
 				0027329E20EB526F0056EA0A /* YKTableViewBaseAdapter.m in Sources */,
@@ -553,6 +623,8 @@
 				7152F89A1DF6A9A3003F79E2 /* YKHappyBirthdayViewController.m in Sources */,
 				7194F5771FA2CB57001B4ADF /* UIColor+YKColor.m in Sources */,
 				008B2DC4206A4F12004F81F0 /* YKBirthdayViewController.m in Sources */,
+				00B5AAB6216C82BD00CFF79C /* ZRCardDanceReverseSideView.m in Sources */,
+				00B5AAB9216C8B9900CFF79C /* ZRCardDanceBaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

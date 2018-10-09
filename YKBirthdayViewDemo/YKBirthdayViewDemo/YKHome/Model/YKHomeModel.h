@@ -12,6 +12,6 @@
 @interface YKHomeModel : NSObject
 
 @property (nonatomic, strong) NSString *title;
-@property (nonatomic, assign) YKBirthdayType birthdayType;
+@property (nonatomic, assign) YKAnimationType birthdayType;
 
 @end

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "YKBaseDefined.h"
 
-@interface YKDetailViewController : UIViewController
+@interface YKHomeBirthdayDetailViewController : UIViewController
 
-@property (nonatomic, assign) YKBirthdayType birthdayType;
+@property (nonatomic, assign) YKAnimationType birthdayType;
 
 @end
