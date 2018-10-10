@@ -15,7 +15,7 @@
 
 + (instancetype)shareInstance;
 
-- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(ZRBirthdayHeartModel *)birthdayItem receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock;
+- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayModel:(ZRBirthdayHeartModel *)birthdayModel receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock;
 
 - (void)clearBirthdayViewController;
 

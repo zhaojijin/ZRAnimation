@@ -30,9 +30,9 @@
     
     [self.birthdayView animationForBirthdayLid];
     
-    self.birthdayView.birthdayTitle = self.birthdayItem.birthdayTitle;
-    self.birthdayView.birthdaySubTitle = self.birthdayItem.birthdaySubTitle;
-    self.birthdayView.birthdayDescritpion = self.birthdayItem.birthdayDescriptionTitle;
+    self.birthdayView.birthdayTitle = self.birthdayModel.birthdayTitle;
+    self.birthdayView.birthdaySubTitle = self.birthdayModel.birthdaySubTitle;
+    self.birthdayView.birthdayDescritpion = self.birthdayModel.birthdayDescriptionTitle;
     __weak typeof(self) weakSelf = self;
     self.birthdayView.receiveActionBlock = ^{
         typeof(self) strongSelf = weakSelf;

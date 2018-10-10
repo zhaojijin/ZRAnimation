@@ -52,11 +52,11 @@
 
 // 心形生日快乐
 - (void)showHeartBirthdayViewController {
-    ZRBirthdayHeartModel *birthdayItem = [[ZRBirthdayHeartModel alloc] init];
-    birthdayItem.birthdayTitle = @"亲爱的戎马天涯";
-    birthdayItem.birthdaySubTitle = @"我公司精心为您准备了3000元";
-    birthdayItem.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜！";
-    [[ZRBirthdayHeartMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
+    ZRBirthdayHeartModel *birthdayModel = [[ZRBirthdayHeartModel alloc] init];
+    birthdayModel.birthdayTitle = @"亲爱的戎马天涯";
+    birthdayModel.birthdaySubTitle = @"我公司精心为您准备了3000元";
+    birthdayModel.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜！";
+    [[ZRBirthdayHeartMgr shareInstance] showBirthdayViewInViewController:self birthdayModel:birthdayModel receiveBlock:^{
         NSLog(@"动画完成后做一些处理");
     }];
 }

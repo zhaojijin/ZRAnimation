@@ -29,12 +29,12 @@ static ZRBirthdayHeartMgr *birthdayMgr = nil;
     return birthdayMgr;
 }
 
-- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayItem:(ZRBirthdayHeartModel *)birthdayItem receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock {
+- (void)showBirthdayViewInViewController:(UIViewController *)viewController birthdayModel:(ZRBirthdayHeartModel *)birthdayModel receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock {
     __weak typeof(self) weakSelf = self;
     dispatch_block_t block = ^{
         typeof(self) strongSelf = weakSelf;
         if (strongSelf) {
-            [strongSelf showInViewController:viewController birthdayItem:birthdayItem receiveBlock:receiveBlock];
+            [strongSelf showInViewController:viewController birthdayModel:birthdayModel receiveBlock:receiveBlock];
         }
     };
     if ([NSThread isMainThread]) {
@@ -44,11 +44,11 @@ static ZRBirthdayHeartMgr *birthdayMgr = nil;
     }
 }
 
-- (void)showInViewController:(UIViewController *)viewController birthdayItem:(ZRBirthdayHeartModel *)birthdayItem receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock {
+- (void)showInViewController:(UIViewController *)viewController birthdayModel:(ZRBirthdayHeartModel *)birthdayModel receiveBlock:(ZRBirthdayReceiveActionBlock)receiveBlock {
     [self clearBirthdayViewController];
     
     ZRBirthdayHeartViewController *birthdayViewController = [[ZRBirthdayHeartViewController alloc] initWithNibName:@"ZRBirthdayHeartViewController" bundle:nil];
-    birthdayViewController.birthdayItem = birthdayItem;
+    birthdayViewController.birthdayModel = birthdayModel;
     __weak typeof(self) weakSelf = self;
     birthdayViewController.receiveActionBlock = ^{
         typeof(self) strongSelf = weakSelf;

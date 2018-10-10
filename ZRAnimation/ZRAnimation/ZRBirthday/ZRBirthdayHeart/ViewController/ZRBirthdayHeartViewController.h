@@ -14,7 +14,7 @@
 
 @property (nonatomic, copy) ZRBirthdayReceiveActionBlock receiveActionBlock;
 
-@property (nonatomic, strong) ZRBirthdayHeartModel *birthdayItem;
+@property (nonatomic, strong) ZRBirthdayHeartModel *birthdayModel;
 
 - (void)showInViewController:(UIViewController *)viewController;
 
