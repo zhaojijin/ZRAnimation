@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ZRBirthdayEnvelopeUserFriendsCCell" id="gTV-IL-0wX" customClass="ZRBirthdayEnvelopeUserFriendsCCell">
+            <rect key="frame" x="0.0" y="0.0" width="58" height="75"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="58" height="75"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5bp-l7-CgZ">
+                        <rect key="frame" x="8" y="0.0" width="42" height="75"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gao" translatesAutoresizingMaskIntoConstraints="NO" id="qdM-Tm-Q5X">
+                                <rect key="frame" x="0.0" y="10" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qdM-Tm-Q5X" secondAttribute="height" multiplier="1:1" id="MDj-VP-MwC"/>
+                                    <constraint firstAttribute="width" constant="42" id="i06-Ji-mD2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday_envelope_crown" translatesAutoresizingMaskIntoConstraints="NO" id="NCr-61-Zd2">
+                                <rect key="frame" x="-3" y="0.0" width="26" height="20"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高小姐" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QI-LM-xB6">
+                                <rect key="frame" x="0.0" y="60" width="42" height="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" red="0.47058823529411764" green="0.10196078431372549" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8QI-LM-xB6" firstAttribute="centerX" secondItem="5bp-l7-CgZ" secondAttribute="centerX" id="3VM-vu-HUm"/>
+                            <constraint firstItem="8QI-LM-xB6" firstAttribute="leading" secondItem="5bp-l7-CgZ" secondAttribute="leading" id="4o3-d2-WMN"/>
+                            <constraint firstItem="qdM-Tm-Q5X" firstAttribute="centerX" secondItem="5bp-l7-CgZ" secondAttribute="centerX" id="GAq-UL-5jc"/>
+                            <constraint firstItem="qdM-Tm-Q5X" firstAttribute="leading" secondItem="NCr-61-Zd2" secondAttribute="leading" constant="3" id="IPP-po-YnH"/>
+                            <constraint firstAttribute="trailing" secondItem="8QI-LM-xB6" secondAttribute="trailing" id="Mfq-qs-2pn"/>
+                            <constraint firstItem="8QI-LM-xB6" firstAttribute="top" secondItem="qdM-Tm-Q5X" secondAttribute="bottom" constant="8" id="UKF-Tx-wBp"/>
+                            <constraint firstItem="NCr-61-Zd2" firstAttribute="top" secondItem="5bp-l7-CgZ" secondAttribute="top" id="f8s-kf-SxF"/>
+                            <constraint firstAttribute="bottom" secondItem="8QI-LM-xB6" secondAttribute="bottom" id="fd6-Pq-oYl"/>
+                            <constraint firstItem="qdM-Tm-Q5X" firstAttribute="top" secondItem="5bp-l7-CgZ" secondAttribute="top" constant="10" id="ihr-Lk-cz1"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="birthday_envelope_omit" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-Ad-kAl">
+                        <rect key="frame" x="2" y="28" width="23" height="5"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5bp-l7-CgZ" secondAttribute="bottom" id="JrW-Ky-9Tj"/>
+                <constraint firstItem="5bp-l7-CgZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="S6B-Wu-XWy"/>
+                <constraint firstItem="5bp-l7-CgZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WeK-X0-WVM"/>
+                <constraint firstAttribute="trailing" secondItem="5bp-l7-CgZ" secondAttribute="trailing" constant="8" id="Xya-gf-epo"/>
+                <constraint firstItem="mnP-Ad-kAl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="bix-iP-paE"/>
+                <constraint firstItem="5bp-l7-CgZ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="doS-ps-NVx"/>
+                <constraint firstItem="mnP-Ad-kAl" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-7" id="xjv-4T-CxJ"/>
+            </constraints>
+            <size key="customSize" width="165" height="183"/>
+            <connections>
+                <outlet property="containerView" destination="5bp-l7-CgZ" id="geG-kF-Zh7"/>
+                <outlet property="headImageView" destination="qdM-Tm-Q5X" id="PnD-kS-DXh"/>
+                <outlet property="moreImageView" destination="mnP-Ad-kAl" id="Mz5-7G-b89"/>
+                <outlet property="nameLabel" destination="8QI-LM-xB6" id="j3B-EI-9ST"/>
+            </connections>
+            <point key="canvasLocation" x="2" y="220.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="birthday_envelope_crown" width="26" height="20"/>
+        <image name="birthday_envelope_omit" width="23" height="5"/>
+        <image name="gao" width="100" height="100"/>
+    </resources>
+</document>

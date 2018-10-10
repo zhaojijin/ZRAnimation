@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZRBirthdayHeartViewController">
+            <connections>
+                <outlet property="birthdayView" destination="grt-NK-ScN" id="nul-CU-eci"/>
+                <outlet property="birthdayViewHeightConstraint" destination="YcU-Wo-RgC" id="hOF-l4-O0u"/>
+                <outlet property="birthdayViewWidthConstraint" destination="aJY-5c-ION" id="PkE-Ms-26Y"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v39-VK-qeN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grt-NK-ScN" customClass="ZRBirthdayHeartView">
+                    <rect key="frame" x="47" y="198" width="281" height="271"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="271" id="YcU-Wo-RgC"/>
+                        <constraint firstAttribute="width" constant="281" id="aJY-5c-ION"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="v39-VK-qeN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Koc-ee-Nk2"/>
+                <constraint firstAttribute="bottom" secondItem="v39-VK-qeN" secondAttribute="bottom" id="Wf7-n0-Fob"/>
+                <constraint firstAttribute="trailing" secondItem="v39-VK-qeN" secondAttribute="trailing" id="aRo-Bf-AM7"/>
+                <constraint firstItem="v39-VK-qeN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gD0-qa-Y71"/>
+                <constraint firstItem="grt-NK-ScN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="qvn-Dz-uEj"/>
+                <constraint firstItem="grt-NK-ScN" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zG2-9k-Nvt"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

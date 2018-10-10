@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZRBirthdayEnvelopeViewController">
+            <connections>
+                <outlet property="closeButtonTopConstraint" destination="Kbw-KB-Mp3" id="tgs-57-0BY"/>
+                <outlet property="envelopeView" destination="VWi-Fm-VD3" id="kXZ-Au-VJt"/>
+                <outlet property="envelopeViewHeightConstraint" destination="0ad-Hz-aoU" id="hEL-9i-R3H"/>
+                <outlet property="envelopeViewWidthConstraint" destination="o7u-f5-kqC" id="Nx9-sS-I4r"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dnf-JO-efk">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWi-Fm-VD3" customClass="ZRBirthdayEnvelopeView">
+                    <rect key="frame" x="35.5" y="130.5" width="304" height="386"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="386" id="0ad-Hz-aoU"/>
+                        <constraint firstAttribute="width" constant="304" id="o7u-f5-kqC"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8h-6h-CLZ">
+                    <rect key="frame" x="172.5" y="551.5" width="30" height="30"/>
+                    <state key="normal" image="birthday_envelope_layer_close">
+                        <color key="titleColor" red="0.56862745100000001" green="0.47058823529999999" blue="0.2470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="2Bm-pP-kjw"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VWi-Fm-VD3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-10" id="9dk-De-vrI"/>
+                <constraint firstItem="dnf-JO-efk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FgW-qU-aYu"/>
+                <constraint firstItem="y8h-6h-CLZ" firstAttribute="top" secondItem="VWi-Fm-VD3" secondAttribute="bottom" constant="35" id="Kbw-KB-Mp3"/>
+                <constraint firstItem="dnf-JO-efk" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="PFt-Lz-Ajd"/>
+                <constraint firstItem="VWi-Fm-VD3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="gC7-uM-96Z"/>
+                <constraint firstItem="y8h-6h-CLZ" firstAttribute="centerX" secondItem="VWi-Fm-VD3" secondAttribute="centerX" id="jve-ul-Txz"/>
+                <constraint firstItem="dnf-JO-efk" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="qJA-jN-zCd"/>
+                <constraint firstItem="dnf-JO-efk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vUF-88-Jyk"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="birthday_envelope_layer_close" width="30" height="30"/>
+    </resources>
+</document>

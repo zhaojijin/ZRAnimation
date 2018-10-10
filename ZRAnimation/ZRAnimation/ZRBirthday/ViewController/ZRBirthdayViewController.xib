@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZRBirthdayViewController">
+            <connections>
+                <outlet property="bgButton" destination="ca5-4N-rGU" id="OQn-VD-jL9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ca5-4N-rGU">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <state key="normal" backgroundImage="bg_normal.jpg"/>
+                    <connections>
+                        <action selector="actionEvent:" destination="-1" eventType="touchUpInside" id="hEh-qk-hjK"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ca5-4N-rGU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1Og-EO-gE6"/>
+                <constraint firstItem="ca5-4N-rGU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="aQG-Ai-LGq"/>
+                <constraint firstAttribute="bottom" secondItem="ca5-4N-rGU" secondAttribute="bottom" id="cOH-w4-hYY"/>
+                <constraint firstAttribute="trailing" secondItem="ca5-4N-rGU" secondAttribute="trailing" id="lZY-2z-Eqr"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg_normal.jpg" width="750" height="1334"/>
+    </resources>
+</document>

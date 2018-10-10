@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00B5AB5D216D98DB00CFF79C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5AB5B216D98DB00CFF79C /* Main.storyboard */; };
+		00B5AB5F216D98DC00CFF79C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B5AB5E216D98DC00CFF79C /* Assets.xcassets */; };
+		00B5AB62216D98DC00CFF79C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B5AB60216D98DC00CFF79C /* LaunchScreen.storyboard */; };
+		00B5AB65216D98DC00CFF79C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B5AB64216D98DC00CFF79C /* main.m */; };
+		00DB8A26216D9BE0006AC512 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A21216D9BE0006AC512 /* AppDelegate.m */; };
+		00DB8A2F216D9C61006AC512 /* ZRHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A2D216D9C61006AC512 /* ZRHomeViewController.m */; };
+		00DB8A30216D9C61006AC512 /* ZRHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A2E216D9C61006AC512 /* ZRHomeViewController.xib */; };
+		00DB8A38216D9CF2006AC512 /* UIColor+ZRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A37216D9CF2006AC512 /* UIColor+ZRColor.m */; };
+		00DB8A40216DA013006AC512 /* ZRTableViewBaseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A3F216DA013006AC512 /* ZRTableViewBaseAdapter.m */; };
+		00DB8A43216DA1B2006AC512 /* ZRHomeAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A42216DA1B2006AC512 /* ZRHomeAdapter.m */; };
+		00DB8A46216DA1F3006AC512 /* ZRHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A45216DA1F3006AC512 /* ZRHomeModel.m */; };
+		00DB8A4A216DA23F006AC512 /* ZRCardDanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A48216DA23F006AC512 /* ZRCardDanceViewController.m */; };
+		00DB8A4B216DA23F006AC512 /* ZRCardDanceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A49216DA23F006AC512 /* ZRCardDanceViewController.xib */; };
+		00DB8A4E216DA26F006AC512 /* ZRCardDanceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A4D216DA26F006AC512 /* ZRCardDanceView.m */; };
+		00DB8A51216DA281006AC512 /* ZRCardDanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A50216DA281006AC512 /* ZRCardDanceModel.m */; };
+		00DB8A54216DA2D1006AC512 /* ZRCardDanceBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A53216DA2D1006AC512 /* ZRCardDanceBaseView.m */; };
+		00DB8A57216DA5E9006AC512 /* ZRCardDanceFrontView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A56216DA5E9006AC512 /* ZRCardDanceFrontView.m */; };
+		00DB8A5A216DA616006AC512 /* ZRCardDanceReverseSideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A59216DA616006AC512 /* ZRCardDanceReverseSideView.m */; };
+		00DB8A60216DA7FB006AC512 /* bg_iPhoneX.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A5D216DA7FB006AC512 /* bg_iPhoneX.jpg */; };
+		00DB8A61216DA7FB006AC512 /* bg_normal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A5E216DA7FB006AC512 /* bg_normal.jpg */; };
+		00DB8A62216DA7FB006AC512 /* birthday.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A5F216DA7FB006AC512 /* birthday.mp3 */; };
+		00DB8A6F216DA9E1006AC512 /* ZRBirthdayHeartMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A6E216DA9E1006AC512 /* ZRBirthdayHeartMgr.m */; };
+		00DB8A75216DAAC5006AC512 /* ZRBirthdayHeartModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A74216DAAC5006AC512 /* ZRBirthdayHeartModel.m */; };
+		00DB8A78216DAB5E006AC512 /* ZRBirthdayHeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A77216DAB5E006AC512 /* ZRBirthdayHeartView.m */; };
+		00DB8A7C216DAC04006AC512 /* ZRBirthdayHeartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A7A216DAC04006AC512 /* ZRBirthdayHeartViewController.m */; };
+		00DB8A7D216DAC04006AC512 /* ZRBirthdayHeartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A7B216DAC04006AC512 /* ZRBirthdayHeartViewController.xib */; };
+		00DB8A80216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A7F216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m */; };
+		00DB8A83216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A82216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.m */; };
+		00DB8A86216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A85216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m */; };
+		00DB8A89216DAEF4006AC512 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A87216DAEF4006AC512 /* UIImage+Rotate.m */; };
+		00DB8A8C216DAF2A006AC512 /* ZRBirthdayEnvelopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A8B216DAF2A006AC512 /* ZRBirthdayEnvelopeView.m */; };
+		00DB8A8F216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A8E216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m */; };
+		00DB8A98216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A96216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.m */; };
+		00DB8A9B216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8A9A216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib */; };
+		00DB8A9F216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8A9D216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.m */; };
+		00DB8AA2216DB3D1006AC512 /* ZRBirthdayEnvelopeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8AA1216DB3D1006AC512 /* ZRBirthdayEnvelopeViewController.xib */; };
+		00DB8AA5216DB40D006AC512 /* ZRDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8AA4216DB40D006AC512 /* ZRDevice.m */; };
+		00DB8AA8216DC185006AC512 /* ZRAudioPlayerMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8AA6216DC185006AC512 /* ZRAudioPlayerMgr.m */; };
+		00DB8AAD216DC1DA006AC512 /* ZRBirthdayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DB8AAA216DC1DA006AC512 /* ZRBirthdayViewController.m */; };
+		00DB8AAE216DC1DA006AC512 /* ZRBirthdayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00DB8AAC216DC1DA006AC512 /* ZRBirthdayViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00B5AB52216D98DB00CFF79C /* ZRAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZRAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00B5AB5C216D98DB00CFF79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00B5AB5E216D98DC00CFF79C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00B5AB61216D98DC00CFF79C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00B5AB63216D98DC00CFF79C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00B5AB64216D98DC00CFF79C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00DB8A20216D9BE0006AC512 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		00DB8A21216D9BE0006AC512 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		00DB8A2C216D9C61006AC512 /* ZRHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRHomeViewController.h; sourceTree = "<group>"; };
+		00DB8A2D216D9C61006AC512 /* ZRHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRHomeViewController.m; sourceTree = "<group>"; };
+		00DB8A2E216D9C61006AC512 /* ZRHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRHomeViewController.xib; sourceTree = "<group>"; };
+		00DB8A36216D9CF2006AC512 /* UIColor+ZRColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+ZRColor.h"; sourceTree = "<group>"; };
+		00DB8A37216D9CF2006AC512 /* UIColor+ZRColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+ZRColor.m"; sourceTree = "<group>"; };
+		00DB8A3C216D9FB8006AC512 /* ZRBaseDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBaseDefined.h; sourceTree = "<group>"; };
+		00DB8A3E216DA013006AC512 /* ZRTableViewBaseAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRTableViewBaseAdapter.h; sourceTree = "<group>"; };
+		00DB8A3F216DA013006AC512 /* ZRTableViewBaseAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRTableViewBaseAdapter.m; sourceTree = "<group>"; };
+		00DB8A41216DA1B2006AC512 /* ZRHomeAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRHomeAdapter.h; sourceTree = "<group>"; };
+		00DB8A42216DA1B2006AC512 /* ZRHomeAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRHomeAdapter.m; sourceTree = "<group>"; };
+		00DB8A44216DA1F3006AC512 /* ZRHomeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRHomeModel.h; sourceTree = "<group>"; };
+		00DB8A45216DA1F3006AC512 /* ZRHomeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRHomeModel.m; sourceTree = "<group>"; };
+		00DB8A47216DA23F006AC512 /* ZRCardDanceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceViewController.h; sourceTree = "<group>"; };
+		00DB8A48216DA23F006AC512 /* ZRCardDanceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceViewController.m; sourceTree = "<group>"; };
+		00DB8A49216DA23F006AC512 /* ZRCardDanceViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRCardDanceViewController.xib; sourceTree = "<group>"; };
+		00DB8A4C216DA26F006AC512 /* ZRCardDanceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceView.h; sourceTree = "<group>"; };
+		00DB8A4D216DA26F006AC512 /* ZRCardDanceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceView.m; sourceTree = "<group>"; };
+		00DB8A4F216DA281006AC512 /* ZRCardDanceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceModel.h; sourceTree = "<group>"; };
+		00DB8A50216DA281006AC512 /* ZRCardDanceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceModel.m; sourceTree = "<group>"; };
+		00DB8A52216DA2D1006AC512 /* ZRCardDanceBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceBaseView.h; sourceTree = "<group>"; };
+		00DB8A53216DA2D1006AC512 /* ZRCardDanceBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceBaseView.m; sourceTree = "<group>"; };
+		00DB8A55216DA5E9006AC512 /* ZRCardDanceFrontView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceFrontView.h; sourceTree = "<group>"; };
+		00DB8A56216DA5E9006AC512 /* ZRCardDanceFrontView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceFrontView.m; sourceTree = "<group>"; };
+		00DB8A58216DA616006AC512 /* ZRCardDanceReverseSideView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRCardDanceReverseSideView.h; sourceTree = "<group>"; };
+		00DB8A59216DA616006AC512 /* ZRCardDanceReverseSideView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRCardDanceReverseSideView.m; sourceTree = "<group>"; };
+		00DB8A5D216DA7FB006AC512 /* bg_iPhoneX.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_iPhoneX.jpg; sourceTree = "<group>"; };
+		00DB8A5E216DA7FB006AC512 /* bg_normal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_normal.jpg; sourceTree = "<group>"; };
+		00DB8A5F216DA7FB006AC512 /* birthday.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = birthday.mp3; sourceTree = "<group>"; };
+		00DB8A6D216DA9E1006AC512 /* ZRBirthdayHeartMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayHeartMgr.h; sourceTree = "<group>"; };
+		00DB8A6E216DA9E1006AC512 /* ZRBirthdayHeartMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayHeartMgr.m; sourceTree = "<group>"; };
+		00DB8A73216DAAC5006AC512 /* ZRBirthdayHeartModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayHeartModel.h; sourceTree = "<group>"; };
+		00DB8A74216DAAC5006AC512 /* ZRBirthdayHeartModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayHeartModel.m; sourceTree = "<group>"; };
+		00DB8A76216DAB5E006AC512 /* ZRBirthdayHeartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayHeartView.h; sourceTree = "<group>"; };
+		00DB8A77216DAB5E006AC512 /* ZRBirthdayHeartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayHeartView.m; sourceTree = "<group>"; };
+		00DB8A79216DAC04006AC512 /* ZRBirthdayHeartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayHeartViewController.h; sourceTree = "<group>"; };
+		00DB8A7A216DAC04006AC512 /* ZRBirthdayHeartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayHeartViewController.m; sourceTree = "<group>"; };
+		00DB8A7B216DAC04006AC512 /* ZRBirthdayHeartViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRBirthdayHeartViewController.xib; sourceTree = "<group>"; };
+		00DB8A7E216DAD53006AC512 /* ZRBirthdayEnvelopeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeModel.h; sourceTree = "<group>"; };
+		00DB8A7F216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeModel.m; sourceTree = "<group>"; };
+		00DB8A81216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeFriendsItem.h; sourceTree = "<group>"; };
+		00DB8A82216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeFriendsItem.m; sourceTree = "<group>"; };
+		00DB8A84216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeMgr.h; sourceTree = "<group>"; };
+		00DB8A85216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeMgr.m; sourceTree = "<group>"; };
+		00DB8A87216DAEF4006AC512 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		00DB8A88216DAEF4006AC512 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
+		00DB8A8A216DAF2A006AC512 /* ZRBirthdayEnvelopeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeView.h; sourceTree = "<group>"; };
+		00DB8A8B216DAF2A006AC512 /* ZRBirthdayEnvelopeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeView.m; sourceTree = "<group>"; };
+		00DB8A8D216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeUserDescView.h; sourceTree = "<group>"; };
+		00DB8A8E216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeUserDescView.m; sourceTree = "<group>"; };
+		00DB8A95216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeUserFriendsCCell.h; sourceTree = "<group>"; };
+		00DB8A96216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeUserFriendsCCell.m; sourceTree = "<group>"; };
+		00DB8A9A216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBirthdayEnvelopeUserFriendsCCell.xib; sourceTree = "<group>"; };
+		00DB8A9C216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayEnvelopeViewController.h; sourceTree = "<group>"; };
+		00DB8A9D216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayEnvelopeViewController.m; sourceTree = "<group>"; };
+		00DB8AA1216DB3D1006AC512 /* ZRBirthdayEnvelopeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBirthdayEnvelopeViewController.xib; sourceTree = "<group>"; };
+		00DB8AA3216DB40D006AC512 /* ZRDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRDevice.h; sourceTree = "<group>"; };
+		00DB8AA4216DB40D006AC512 /* ZRDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRDevice.m; sourceTree = "<group>"; };
+		00DB8AA6216DC185006AC512 /* ZRAudioPlayerMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRAudioPlayerMgr.m; sourceTree = "<group>"; };
+		00DB8AA7216DC185006AC512 /* ZRAudioPlayerMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRAudioPlayerMgr.h; sourceTree = "<group>"; };
+		00DB8AAA216DC1DA006AC512 /* ZRBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayViewController.m; sourceTree = "<group>"; };
+		00DB8AAB216DC1DA006AC512 /* ZRBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayViewController.h; sourceTree = "<group>"; };
+		00DB8AAC216DC1DA006AC512 /* ZRBirthdayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBirthdayViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00B5AB4F216D98DB00CFF79C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00B5AB49216D98DB00CFF79C = {
+			isa = PBXGroup;
+			children = (
+				00B5AB54216D98DB00CFF79C /* ZRAnimation */,
+				00B5AB53216D98DB00CFF79C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00B5AB53216D98DB00CFF79C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AB52216D98DB00CFF79C /* ZRAnimation.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00B5AB54216D98DB00CFF79C /* ZRAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A5B216DA7FB006AC512 /* ZRResource */,
+				00DB8A11216D9BE0006AC512 /* ZRBaseLib */,
+				00DB8A16216D9BE0006AC512 /* ZRBirthday */,
+				00DB8A12216D9BE0006AC512 /* ZRCardDance */,
+				00DB8A22216D9BE0006AC512 /* ZRHome */,
+				00DB8A1F216D9BE0006AC512 /* ZROther */,
+			);
+			path = ZRAnimation;
+			sourceTree = "<group>";
+		};
+		00DB8A11216D9BE0006AC512 /* ZRBaseLib */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A3D216D9FF8006AC512 /* ZRAdapter */,
+				00DB8A36216D9CF2006AC512 /* UIColor+ZRColor.h */,
+				00DB8A37216D9CF2006AC512 /* UIColor+ZRColor.m */,
+				00DB8A88216DAEF4006AC512 /* UIImage+Rotate.h */,
+				00DB8A87216DAEF4006AC512 /* UIImage+Rotate.m */,
+				00DB8AA3216DB40D006AC512 /* ZRDevice.h */,
+				00DB8AA4216DB40D006AC512 /* ZRDevice.m */,
+				00DB8AA7216DC185006AC512 /* ZRAudioPlayerMgr.h */,
+				00DB8AA6216DC185006AC512 /* ZRAudioPlayerMgr.m */,
+				00DB8A3C216D9FB8006AC512 /* ZRBaseDefined.h */,
+			);
+			path = ZRBaseLib;
+			sourceTree = "<group>";
+		};
+		00DB8A12216D9BE0006AC512 /* ZRCardDance */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A13216D9BE0006AC512 /* Model */,
+				00DB8A14216D9BE0006AC512 /* View */,
+				00DB8A15216D9BE0006AC512 /* ViewController */,
+			);
+			path = ZRCardDance;
+			sourceTree = "<group>";
+		};
+		00DB8A13216D9BE0006AC512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A4F216DA281006AC512 /* ZRCardDanceModel.h */,
+				00DB8A50216DA281006AC512 /* ZRCardDanceModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00DB8A14216D9BE0006AC512 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A4C216DA26F006AC512 /* ZRCardDanceView.h */,
+				00DB8A4D216DA26F006AC512 /* ZRCardDanceView.m */,
+				00DB8A52216DA2D1006AC512 /* ZRCardDanceBaseView.h */,
+				00DB8A53216DA2D1006AC512 /* ZRCardDanceBaseView.m */,
+				00DB8A55216DA5E9006AC512 /* ZRCardDanceFrontView.h */,
+				00DB8A56216DA5E9006AC512 /* ZRCardDanceFrontView.m */,
+				00DB8A58216DA616006AC512 /* ZRCardDanceReverseSideView.h */,
+				00DB8A59216DA616006AC512 /* ZRCardDanceReverseSideView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00DB8A15216D9BE0006AC512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A47216DA23F006AC512 /* ZRCardDanceViewController.h */,
+				00DB8A48216DA23F006AC512 /* ZRCardDanceViewController.m */,
+				00DB8A49216DA23F006AC512 /* ZRCardDanceViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		00DB8A16216D9BE0006AC512 /* ZRBirthday */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8AA9216DC1DA006AC512 /* ViewController */,
+				00DB8A17216D9BE0006AC512 /* ZRBirthdayHeart */,
+				00DB8A1B216D9BE0006AC512 /* ZRBirthdayEnvelope */,
+			);
+			path = ZRBirthday;
+			sourceTree = "<group>";
+		};
+		00DB8A17216D9BE0006AC512 /* ZRBirthdayHeart */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A18216D9BE0006AC512 /* Model */,
+				00DB8A19216D9BE0006AC512 /* View */,
+				00DB8A1A216D9BE0006AC512 /* ViewController */,
+			);
+			path = ZRBirthdayHeart;
+			sourceTree = "<group>";
+		};
+		00DB8A18216D9BE0006AC512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A6D216DA9E1006AC512 /* ZRBirthdayHeartMgr.h */,
+				00DB8A6E216DA9E1006AC512 /* ZRBirthdayHeartMgr.m */,
+				00DB8A73216DAAC5006AC512 /* ZRBirthdayHeartModel.h */,
+				00DB8A74216DAAC5006AC512 /* ZRBirthdayHeartModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00DB8A19216D9BE0006AC512 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A76216DAB5E006AC512 /* ZRBirthdayHeartView.h */,
+				00DB8A77216DAB5E006AC512 /* ZRBirthdayHeartView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00DB8A1A216D9BE0006AC512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A79216DAC04006AC512 /* ZRBirthdayHeartViewController.h */,
+				00DB8A7A216DAC04006AC512 /* ZRBirthdayHeartViewController.m */,
+				00DB8A7B216DAC04006AC512 /* ZRBirthdayHeartViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		00DB8A1B216D9BE0006AC512 /* ZRBirthdayEnvelope */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A1C216D9BE0006AC512 /* Model */,
+				00DB8A1D216D9BE0006AC512 /* View */,
+				00DB8A1E216D9BE0006AC512 /* ViewController */,
+			);
+			path = ZRBirthdayEnvelope;
+			sourceTree = "<group>";
+		};
+		00DB8A1C216D9BE0006AC512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A7E216DAD53006AC512 /* ZRBirthdayEnvelopeModel.h */,
+				00DB8A7F216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m */,
+				00DB8A81216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.h */,
+				00DB8A82216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.m */,
+				00DB8A84216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.h */,
+				00DB8A85216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00DB8A1D216D9BE0006AC512 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A8A216DAF2A006AC512 /* ZRBirthdayEnvelopeView.h */,
+				00DB8A8B216DAF2A006AC512 /* ZRBirthdayEnvelopeView.m */,
+				00DB8A8D216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.h */,
+				00DB8A8E216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m */,
+				00DB8A95216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.h */,
+				00DB8A96216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.m */,
+				00DB8A9A216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00DB8A1E216D9BE0006AC512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A9C216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.h */,
+				00DB8A9D216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.m */,
+				00DB8AA1216DB3D1006AC512 /* ZRBirthdayEnvelopeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		00DB8A1F216D9BE0006AC512 /* ZROther */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A20216D9BE0006AC512 /* AppDelegate.h */,
+				00DB8A21216D9BE0006AC512 /* AppDelegate.m */,
+				00B5AB5B216D98DB00CFF79C /* Main.storyboard */,
+				00B5AB60216D98DC00CFF79C /* LaunchScreen.storyboard */,
+				00B5AB63216D98DC00CFF79C /* Info.plist */,
+				00B5AB64216D98DC00CFF79C /* main.m */,
+			);
+			path = ZROther;
+			sourceTree = "<group>";
+		};
+		00DB8A22216D9BE0006AC512 /* ZRHome */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A23216D9BE0006AC512 /* Model */,
+				00DB8A24216D9BE0006AC512 /* View */,
+				00DB8A25216D9BE0006AC512 /* ViewController */,
+			);
+			path = ZRHome;
+			sourceTree = "<group>";
+		};
+		00DB8A23216D9BE0006AC512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A44216DA1F3006AC512 /* ZRHomeModel.h */,
+				00DB8A45216DA1F3006AC512 /* ZRHomeModel.m */,
+				00DB8A41216DA1B2006AC512 /* ZRHomeAdapter.h */,
+				00DB8A42216DA1B2006AC512 /* ZRHomeAdapter.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		00DB8A24216D9BE0006AC512 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		00DB8A25216D9BE0006AC512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A2C216D9C61006AC512 /* ZRHomeViewController.h */,
+				00DB8A2D216D9C61006AC512 /* ZRHomeViewController.m */,
+				00DB8A2E216D9C61006AC512 /* ZRHomeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		00DB8A3D216D9FF8006AC512 /* ZRAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A3E216DA013006AC512 /* ZRTableViewBaseAdapter.h */,
+				00DB8A3F216DA013006AC512 /* ZRTableViewBaseAdapter.m */,
+			);
+			path = ZRAdapter;
+			sourceTree = "<group>";
+		};
+		00DB8A5B216DA7FB006AC512 /* ZRResource */ = {
+			isa = PBXGroup;
+			children = (
+				00B5AB5E216D98DC00CFF79C /* Assets.xcassets */,
+				00DB8A5C216DA7FB006AC512 /* ZRBirthday */,
+			);
+			path = ZRResource;
+			sourceTree = "<group>";
+		};
+		00DB8A5C216DA7FB006AC512 /* ZRBirthday */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8A5D216DA7FB006AC512 /* bg_iPhoneX.jpg */,
+				00DB8A5E216DA7FB006AC512 /* bg_normal.jpg */,
+				00DB8A5F216DA7FB006AC512 /* birthday.mp3 */,
+			);
+			path = ZRBirthday;
+			sourceTree = "<group>";
+		};
+		00DB8AA9216DC1DA006AC512 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				00DB8AAB216DC1DA006AC512 /* ZRBirthdayViewController.h */,
+				00DB8AAA216DC1DA006AC512 /* ZRBirthdayViewController.m */,
+				00DB8AAC216DC1DA006AC512 /* ZRBirthdayViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00B5AB51216D98DB00CFF79C /* ZRAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00B5AB68216D98DC00CFF79C /* Build configuration list for PBXNativeTarget "ZRAnimation" */;
+			buildPhases = (
+				00B5AB4E216D98DB00CFF79C /* Sources */,
+				00B5AB4F216D98DB00CFF79C /* Frameworks */,
+				00B5AB50216D98DB00CFF79C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZRAnimation;
+			productName = ZRAnimation;
+			productReference = 00B5AB52216D98DB00CFF79C /* ZRAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00B5AB4A216D98DB00CFF79C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = ZR;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = RobinZhao;
+				TargetAttributes = {
+					00B5AB51216D98DB00CFF79C = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 00B5AB4D216D98DB00CFF79C /* Build configuration list for PBXProject "ZRAnimation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00B5AB49216D98DB00CFF79C;
+			productRefGroup = 00B5AB53216D98DB00CFF79C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00B5AB51216D98DB00CFF79C /* ZRAnimation */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00B5AB50216D98DB00CFF79C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DB8A9B216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib in Resources */,
+				00B5AB62216D98DC00CFF79C /* LaunchScreen.storyboard in Resources */,
+				00DB8A30216D9C61006AC512 /* ZRHomeViewController.xib in Resources */,
+				00DB8A7D216DAC04006AC512 /* ZRBirthdayHeartViewController.xib in Resources */,
+				00DB8A4B216DA23F006AC512 /* ZRCardDanceViewController.xib in Resources */,
+				00DB8AAE216DC1DA006AC512 /* ZRBirthdayViewController.xib in Resources */,
+				00B5AB5F216D98DC00CFF79C /* Assets.xcassets in Resources */,
+				00DB8A61216DA7FB006AC512 /* bg_normal.jpg in Resources */,
+				00B5AB5D216D98DB00CFF79C /* Main.storyboard in Resources */,
+				00DB8AA2216DB3D1006AC512 /* ZRBirthdayEnvelopeViewController.xib in Resources */,
+				00DB8A62216DA7FB006AC512 /* birthday.mp3 in Resources */,
+				00DB8A60216DA7FB006AC512 /* bg_iPhoneX.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00B5AB4E216D98DB00CFF79C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DB8A46216DA1F3006AC512 /* ZRHomeModel.m in Sources */,
+				00DB8A78216DAB5E006AC512 /* ZRBirthdayHeartView.m in Sources */,
+				00DB8A43216DA1B2006AC512 /* ZRHomeAdapter.m in Sources */,
+				00DB8A38216D9CF2006AC512 /* UIColor+ZRColor.m in Sources */,
+				00DB8A6F216DA9E1006AC512 /* ZRBirthdayHeartMgr.m in Sources */,
+				00DB8A54216DA2D1006AC512 /* ZRCardDanceBaseView.m in Sources */,
+				00DB8A5A216DA616006AC512 /* ZRCardDanceReverseSideView.m in Sources */,
+				00DB8A40216DA013006AC512 /* ZRTableViewBaseAdapter.m in Sources */,
+				00DB8A2F216D9C61006AC512 /* ZRHomeViewController.m in Sources */,
+				00DB8AA5216DB40D006AC512 /* ZRDevice.m in Sources */,
+				00DB8A4E216DA26F006AC512 /* ZRCardDanceView.m in Sources */,
+				00DB8A75216DAAC5006AC512 /* ZRBirthdayHeartModel.m in Sources */,
+				00DB8A57216DA5E9006AC512 /* ZRCardDanceFrontView.m in Sources */,
+				00DB8A89216DAEF4006AC512 /* UIImage+Rotate.m in Sources */,
+				00DB8A51216DA281006AC512 /* ZRCardDanceModel.m in Sources */,
+				00DB8A86216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m in Sources */,
+				00DB8A4A216DA23F006AC512 /* ZRCardDanceViewController.m in Sources */,
+				00DB8A80216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m in Sources */,
+				00DB8A8F216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m in Sources */,
+				00DB8A26216D9BE0006AC512 /* AppDelegate.m in Sources */,
+				00DB8A7C216DAC04006AC512 /* ZRBirthdayHeartViewController.m in Sources */,
+				00DB8AAD216DC1DA006AC512 /* ZRBirthdayViewController.m in Sources */,
+				00DB8AA8216DC185006AC512 /* ZRAudioPlayerMgr.m in Sources */,
+				00DB8A8C216DAF2A006AC512 /* ZRBirthdayEnvelopeView.m in Sources */,
+				00B5AB65216D98DC00CFF79C /* main.m in Sources */,
+				00DB8A9F216DB2B1006AC512 /* ZRBirthdayEnvelopeViewController.m in Sources */,
+				00DB8A98216DB13F006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.m in Sources */,
+				00DB8A83216DADD1006AC512 /* ZRBirthdayEnvelopeFriendsItem.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		00B5AB5B216D98DB00CFF79C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00B5AB5C216D98DB00CFF79C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		00B5AB60216D98DC00CFF79C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00B5AB61216D98DC00CFF79C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00B5AB66216D98DC00CFF79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		00B5AB67216D98DC00CFF79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		00B5AB69216D98DC00CFF79C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8R8RTYMXAW;
+				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zr.ZRAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = SimpleFinance_All_Development;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		00B5AB6A216D98DC00CFF79C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zr.ZRAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00B5AB4D216D98DB00CFF79C /* Build configuration list for PBXProject "ZRAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B5AB66216D98DC00CFF79C /* Debug */,
+				00B5AB67216D98DC00CFF79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00B5AB68216D98DC00CFF79C /* Build configuration list for PBXNativeTarget "ZRAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00B5AB69216D98DC00CFF79C /* Debug */,
+				00B5AB6A216D98DC00CFF79C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00B5AB4A216D98DB00CFF79C /* Project object */;
+}
