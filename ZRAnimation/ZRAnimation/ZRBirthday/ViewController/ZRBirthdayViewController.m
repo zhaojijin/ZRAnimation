@@ -23,7 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *imageName = ([ZRDevice deviceType] == ZRDeviceTypeX || [ZRDevice deviceType] == ZRDeviceTypeXM) ? @"bg_iPhoneX.jpg" : @"bg_normal.jpg";
+    NSString *imageName = ZRIPhoneXAll ? @"bg_iPhoneX.jpg" : @"bg_normal.jpg";
     [self.bgButton setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
     self.title = @"生日快乐";
     [self actionEvent:nil];

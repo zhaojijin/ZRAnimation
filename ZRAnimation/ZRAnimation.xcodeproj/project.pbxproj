@@ -120,6 +120,7 @@
 		00DB8AAA216DC1DA006AC512 /* ZRBirthdayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRBirthdayViewController.m; sourceTree = "<group>"; };
 		00DB8AAB216DC1DA006AC512 /* ZRBirthdayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRBirthdayViewController.h; sourceTree = "<group>"; };
 		00DB8AAC216DC1DA006AC512 /* ZRBirthdayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZRBirthdayViewController.xib; sourceTree = "<group>"; };
+		00DB8AAF216DCE49006AC512 /* ZRPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRPrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +176,7 @@
 				00DB8AA7216DC185006AC512 /* ZRAudioPlayerMgr.h */,
 				00DB8AA6216DC185006AC512 /* ZRAudioPlayerMgr.m */,
 				00DB8A3C216D9FB8006AC512 /* ZRBaseDefined.h */,
+				00DB8AAF216DCE49006AC512 /* ZRPrefixHeader.pch */,
 			);
 			path = ZRBaseLib;
 			sourceTree = "<group>";
@@ -660,6 +662,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8R8RTYMXAW;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZRAnimation/ZRBaseLib/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -679,6 +682,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZRAnimation/ZRBaseLib/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (

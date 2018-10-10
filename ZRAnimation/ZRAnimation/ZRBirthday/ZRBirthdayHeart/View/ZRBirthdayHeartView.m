@@ -75,8 +75,7 @@ static inline CGFloat ZRDegreesToRadians(CGFloat degrees) {return degrees * M_PI
 
 - (void)setupSubviews {
     self.animationList = [NSMutableArray array];
-    CGFloat screenWidth = [UIScreen mainScreen].bounds.size.width;
-    self.uiScale = screenWidth > 320.0f ? 1.0f : 0.9f;
+    self.uiScale = ZRScreenW > 320.0f ? 1.0f : 0.9f;
     [self setLayerFrame];
 }
 
@@ -174,7 +173,7 @@ static inline CGFloat ZRDegreesToRadians(CGFloat degrees) {return degrees * M_PI
     CGFloat labelHeight = 20;
     
     CGFloat titleOriginY = 55 * self.uiScale;
-    if ([UIScreen mainScreen].bounds.size.width == 320) {
+    if (ZRScreenW == 320) {
         titleOriginY = 43;
     }
     CGRect titleFrame = CGRectMake(0, titleOriginY, self.width, labelHeight);

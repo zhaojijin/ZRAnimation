@@ -27,15 +27,10 @@
     [super viewDidLoad];
     self.envelopeViewWidthConstraint.constant = 304 * self.envelopeView.uiScale;
     self.envelopeViewHeightConstraint.constant = 386 * self.envelopeView.uiScale;
-    switch ([ZRDevice deviceType]) {
-        case ZRDeviceType4S:
-            self.closeButtonTopConstraint.constant = 15;
-            break;
-        case ZRDeviceType5S:
-            self.closeButtonTopConstraint.constant = 30;
-            break;
-        default:
-            break;
+    if (ZRIPhone4) {
+        self.closeButtonTopConstraint.constant = 15;
+    } else if (ZRIPhone5) {
+        self.closeButtonTopConstraint.constant = 30;
     }
     __weak typeof(self) weakSelf = self;
     self.envelopeView.receiveActionBlock = ^{

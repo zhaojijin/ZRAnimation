@@ -20,8 +20,7 @@
     self.title = @"卡片翻转";
     // 可根据业务需求来自定义Model，在ZRCardDanceFrontView和ZRCardDanceReverseSideView中自定义UI
     ZRCardDanceView *cardDanceView = [[ZRCardDanceView alloc] initWithFrame:CGRectMake(0, 0, 172.5, 250) model:nil];
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    cardDanceView.center = CGPointMake(screenSize.width/2, screenSize.height/2);
+    cardDanceView.center = CGPointMake(ZRScreenW/2, ZRScreenH/2);
     [self.view addSubview:cardDanceView];
 }
 
