@@ -58,6 +58,5 @@
 }
 
 ```
-<font color = red>有任何感觉不妥的地方请您给出宝贵的意见，谢谢！</font>
-#### 声明转载请注明出处[https://github.com/zhaojijin/YKBirthdayViewDemo](https://github.com/zhaojijin/YKBirthdayViewDemo)
+#### 有任何感觉不妥的地方请您给出宝贵的意见，谢谢！
  
