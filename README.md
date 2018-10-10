@@ -5,10 +5,6 @@
 ![](https://github.com/zhaojijin/ZRAnimation/blob/master/Birthday.gif)
 ![](https://github.com/zhaojijin/ZRAnimation/blob/master/CardDance.gif)
 
-#### 应用场景
-
-项目中用户过生日时做活动用的native展示部分
-
 #### 简单使用
 
 ```
