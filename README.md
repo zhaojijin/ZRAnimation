@@ -1,9 +1,9 @@
-# YKBirthdayViewDemo
+# ZRAnimation
 
 #### 效果演示
 
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/Birthday.gif)
-![](https://github.com/zhaojijin/YKBirthdayViewDemo/blob/master/CardDance.gif)
+![](https://github.com/zhaojijin/ZRAnimation/blob/master/Birthday.gif)
+![](https://github.com/zhaojijin/ZRAnimation/blob/master/CardDance.gif)
 
 #### 应用场景
 
@@ -14,46 +14,46 @@
 ```
 // 心形生日快乐
 - (void)showHeartBirthdayViewController {
-    YKBirthdayItem *birthdayItem = [[YKBirthdayItem alloc] init];
+    ZRBirthdayHeartModel *birthdayItem = [[ZRBirthdayHeartModel alloc] init];
     birthdayItem.birthdayTitle = @"亲爱的戎马天涯";
     birthdayItem.birthdaySubTitle = @"我公司精心为您准备了3000元";
     birthdayItem.birthdayDescriptionTitle = @"生日礼金，和一份特别惊喜！";
-    [[YKBirthdayMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
+    [[ZRBirthdayHeartMgr shareInstance] showBirthdayViewInViewController:self birthdayItem:birthdayItem receiveBlock:^{
         NSLog(@"动画完成后做一些处理");
     }];
 }
 
 // 信封生日祝福
 - (void)showEnvelopeBirthdayOneViewController {
-    YKBirthdayModel *model = [[YKBirthdayModel alloc] init];
+    ZRBirthdayEnvelopeModel *model = [[ZRBirthdayEnvelopeModel alloc] init];
     model.birthdayLayerName = @"亲爱的戎马天涯";
     model.birthdayLayerDesc = @"我公司精心为您准备了3000元生日礼金，赶快来领取吧";
-    model.birthdayLayerType = YKBirthdayLayerTypeForA;
-    [[YKBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
+    model.birthdayLayerType = ZRBirthdayLayerTypeForA;
+    [[ZRBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
 }
 
 // 信封送好友生日祝福
 - (void)showEnvelopeBirthdayTwoViewController {
-    YKBirthdayModel *model = [[YKBirthdayModel alloc] init];
+    ZRBirthdayEnvelopeModel *model = [[ZRBirthdayEnvelopeModel alloc] init];
     model.birthdayLayerName = @"亲爱的戎马天涯";
     model.birthdayLayerDesc = @"您的好友高圆圆小姐过生日啦，快去送祝福吧";
-    model.birthdayLayerType = YKBirthdayLayerTypeForB;
+    model.birthdayLayerType = ZRBirthdayLayerTypeForB;
     for (NSInteger i = 0; i < 1; ++i) {
-        YKBirthdayFriendsItem *item = [YKBirthdayFriendsItem new];
+        ZRBirthdayEnvelopeFriendsItem *item = [ZRBirthdayEnvelopeFriendsItem new];
         item.title = @"高小姐";
         item.isMore = i > 2;
         [model.friendsBirthdayInfo addObject:item];
     }
-    [[YKBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
+    [[ZRBirthdayEnvelopeMgr shareInstance] showBirthdayViewController:self birthdayModel:model];
 }
 
 // 简单卡片翻转动画
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"卡片翻转";
     // 可根据业务需求来自定义Model，在ZRCardDanceFrontView和ZRCardDanceReverseSideView中自定义UI
     ZRCardDanceView *cardDanceView = [[ZRCardDanceView alloc] initWithFrame:CGRectMake(0, 0, 172.5, 250) model:nil];
-    CGSize screenSize = [UIScreen mainScreen].bounds.size;
-    cardDanceView.center = CGPointMake(screenSize.width/2, screenSize.height/2);
+    cardDanceView.center = CGPointMake(ZRScreenW/2, ZRScreenH/2);
     [self.view addSubview:cardDanceView];
 }
 
