@@ -10,6 +10,7 @@
 #import "ZRHomeAdapter.h"
 #import "ZRBirthdayViewController.h"
 #import "ZRCardDanceViewController.h"
+#import "ZRRecordViewController.h"
 
 @interface ZRHomeViewController ()
 
@@ -49,6 +50,11 @@
         case ZRAnimationTypeCardDance: {
             ZRCardDanceViewController *cardDanceViewController = [[ZRCardDanceViewController alloc] initWithNibName:@"ZRCardDanceViewController" bundle:nil];
             [self.navigationController pushViewController:cardDanceViewController animated:YES];
+        }
+            break;
+        case ZRAnimationTypeRecordOne: {
+            ZRRecordViewController *recordViewController = [[ZRRecordViewController alloc] initWithNibName:@"ZRRecordViewController" bundle:nil];
+            [self.navigationController pushViewController:recordViewController animated:YES];
         }
             break;
         default:

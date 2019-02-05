@@ -14,18 +14,11 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        NSArray *titleList = @[@"心形生日祝福",@"打开信封生日祝福①",@"打开信封生日祝福②",@"卡片翻转动画",@"视频录制按钮"];
         // 初始化数据
-        for (NSInteger i = 0; i < 4; ++i) {
+        for (NSInteger i = 0; i < titleList.count; ++i) {
             ZRHomeModel * model = [ZRHomeModel new];
-            if (i == 0) {
-                model.title = @"心形生日祝福";
-            } else if (i == 1) {
-                model.title = @"打开信封生日祝福①";
-            } else if (i == 2) {
-                model.title = @"打开信封生日祝福②";
-            } else if (i == 3) {
-                model.title = @"卡片翻转动画";
-            }
+            model.title = titleList[i];
             model.birthdayType = i+1;
             [self.itemList addObject:model];
         }
