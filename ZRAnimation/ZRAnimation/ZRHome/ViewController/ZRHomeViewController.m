@@ -11,6 +11,7 @@
 #import "ZRBirthdayViewController.h"
 #import "ZRCardDanceViewController.h"
 #import "ZRRecordViewController.h"
+#import "ZRMitreViewController.h"
 
 @interface ZRHomeViewController ()
 
@@ -37,13 +38,13 @@
     self.title = @"首页";
 }
 
-- (void)handleJumpDetailEvent:(ZRAnimationType)birthdayType {
-    switch (birthdayType) {
+- (void)handleJumpDetailEvent:(ZRAnimationType)animationType {
+    switch (animationType) {
         case ZRAnimationTypeHeart:
         case ZRAnimationTypeEnvelopeOne:
         case ZRAnimationTypeEnvelopeTwo: {
             ZRBirthdayViewController *vc = [[ZRBirthdayViewController alloc] initWithNibName:@"ZRBirthdayViewController" bundle:nil];
-            vc.birthdayType = birthdayType;
+            vc.birthdayType = animationType;
             [self.navigationController pushViewController:vc animated:YES];
         }
             break;
@@ -57,6 +58,10 @@
             [self.navigationController pushViewController:recordViewController animated:YES];
         }
             break;
+        case ZRAnimationTypeMitreProgress: {
+            ZRMitreViewController *mitreViewController = [[ZRMitreViewController alloc] initWithNibName:@"ZRMitreViewController" bundle:nil];
+            [self.navigationController pushViewController:mitreViewController animated:YES];
+        } break;
         default:
             break;
     }

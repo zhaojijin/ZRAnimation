@@ -14,7 +14,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSArray *titleList = @[@"心形生日祝福",@"打开信封生日祝福①",@"打开信封生日祝福②",@"卡片翻转动画",@"视频录制按钮"];
+        NSArray *titleList = @[@"心形生日祝福",@"打开信封生日祝福①",@"打开信封生日祝福②",@"卡片翻转动画",@"视频录制按钮",@"斜角进度条"];
         // 初始化数据
         for (NSInteger i = 0; i < titleList.count; ++i) {
             ZRHomeModel * model = [ZRHomeModel new];

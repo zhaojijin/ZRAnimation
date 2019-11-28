@@ -50,6 +50,9 @@
 		711BD7252202D19400248F98 /* ZRRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BD7232202D19400248F98 /* ZRRecordViewController.m */; };
 		711BD7262202D19400248F98 /* ZRRecordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 711BD7242202D19400248F98 /* ZRRecordViewController.xib */; };
 		711BEBAB2209574F00117606 /* ZRRecordButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 711BEBA92209574F00117606 /* ZRRecordButton.m */; };
+		7187B0D7238FA8AD00E3E6C8 /* ZRMitreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187B0D5238FA8AD00E3E6C8 /* ZRMitreViewController.m */; };
+		7187B0D8238FA8AD00E3E6C8 /* ZRMitreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7187B0D6238FA8AD00E3E6C8 /* ZRMitreViewController.xib */; };
+		7187B0DB238FA8BF00E3E6C8 /* ZRMitreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7187B0DA238FA8BF00E3E6C8 /* ZRMitreView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -129,6 +132,11 @@
 		711BD7242202D19400248F98 /* ZRRecordViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRRecordViewController.xib; sourceTree = "<group>"; };
 		711BEBA92209574F00117606 /* ZRRecordButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRRecordButton.m; sourceTree = "<group>"; };
 		711BEBAA2209574F00117606 /* ZRRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRRecordButton.h; sourceTree = "<group>"; };
+		7187B0D4238FA8AD00E3E6C8 /* ZRMitreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRMitreViewController.h; sourceTree = "<group>"; };
+		7187B0D5238FA8AD00E3E6C8 /* ZRMitreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRMitreViewController.m; sourceTree = "<group>"; };
+		7187B0D6238FA8AD00E3E6C8 /* ZRMitreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZRMitreViewController.xib; sourceTree = "<group>"; };
+		7187B0D9238FA8BF00E3E6C8 /* ZRMitreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZRMitreView.h; sourceTree = "<group>"; };
+		7187B0DA238FA8BF00E3E6C8 /* ZRMitreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZRMitreView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 		00B5AB54216D98DB00CFF79C /* ZRAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				7187B0CF238FA80E00E3E6C8 /* ZRProgress */,
 				00DB8A5B216DA7FB006AC512 /* ZRResource */,
 				00DB8A11216D9BE0006AC512 /* ZRBaseLib */,
 				00DB8A16216D9BE0006AC512 /* ZRBirthday */,
@@ -456,6 +465,50 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		7187B0CF238FA80E00E3E6C8 /* ZRProgress */ = {
+			isa = PBXGroup;
+			children = (
+				7187B0D0238FA81F00E3E6C8 /* MitreProgress */,
+			);
+			path = ZRProgress;
+			sourceTree = "<group>";
+		};
+		7187B0D0238FA81F00E3E6C8 /* MitreProgress */ = {
+			isa = PBXGroup;
+			children = (
+				7187B0D3238FA87200E3E6C8 /* Model */,
+				7187B0D2238FA86B00E3E6C8 /* View */,
+				7187B0D1238FA85F00E3E6C8 /* ViewController */,
+			);
+			path = MitreProgress;
+			sourceTree = "<group>";
+		};
+		7187B0D1238FA85F00E3E6C8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7187B0D4238FA8AD00E3E6C8 /* ZRMitreViewController.h */,
+				7187B0D5238FA8AD00E3E6C8 /* ZRMitreViewController.m */,
+				7187B0D6238FA8AD00E3E6C8 /* ZRMitreViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7187B0D2238FA86B00E3E6C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7187B0D9238FA8BF00E3E6C8 /* ZRMitreView.h */,
+				7187B0DA238FA8BF00E3E6C8 /* ZRMitreView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7187B0D3238FA87200E3E6C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -518,6 +571,7 @@
 				00DB8A9B216DB1FF006AC512 /* ZRBirthdayEnvelopeUserFriendsCCell.xib in Resources */,
 				00B5AB62216D98DC00CFF79C /* LaunchScreen.storyboard in Resources */,
 				00DB8A30216D9C61006AC512 /* ZRHomeViewController.xib in Resources */,
+				7187B0D8238FA8AD00E3E6C8 /* ZRMitreViewController.xib in Resources */,
 				00DB8A7D216DAC04006AC512 /* ZRBirthdayHeartViewController.xib in Resources */,
 				00DB8A4B216DA23F006AC512 /* ZRCardDanceViewController.xib in Resources */,
 				00DB8AAE216DC1DA006AC512 /* ZRBirthdayViewController.xib in Resources */,
@@ -553,8 +607,10 @@
 				00DB8A89216DAEF4006AC512 /* UIImage+Rotate.m in Sources */,
 				00DB8A51216DA281006AC512 /* ZRCardDanceModel.m in Sources */,
 				00DB8A86216DAE04006AC512 /* ZRBirthdayEnvelopeMgr.m in Sources */,
+				7187B0DB238FA8BF00E3E6C8 /* ZRMitreView.m in Sources */,
 				00DB8A4A216DA23F006AC512 /* ZRCardDanceViewController.m in Sources */,
 				00DB8A80216DAD53006AC512 /* ZRBirthdayEnvelopeModel.m in Sources */,
+				7187B0D7238FA8AD00E3E6C8 /* ZRMitreViewController.m in Sources */,
 				711BD7252202D19400248F98 /* ZRRecordViewController.m in Sources */,
 				00DB8A8F216DAFD2006AC512 /* ZRBirthdayEnvelopeUserDescView.m in Sources */,
 				00DB8A26216D9BE0006AC512 /* AppDelegate.m in Sources */,

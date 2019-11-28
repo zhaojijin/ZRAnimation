@@ -16,7 +16,8 @@ typedef NS_ENUM(NSUInteger, ZRAnimationType) {
     ZRAnimationTypeEnvelopeTwo,
     ZRAnimationTypeCardDance,
     ZRAnimationTypeRecordOne,
-    ZRAnimationTypeRecordTwo,
+//    ZRAnimationTypeRecordTwo,
+    ZRAnimationTypeMitreProgress
 };
 
 #endif /* ZRBaseDefined_h */
