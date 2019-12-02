@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZRMitreView : UIView
 
-- (void)updateProgress:(CGFloat)progress fallColor:(UIColor *)fallColor raiseColor:(UIColor *)raiseColor;
+- (void)updateProgress:(CGFloat)progress fallColor:(UIColor *)fallColor raiseColor:(UIColor *)raiseColor animaiton:(BOOL)isAnimation;
 
 @end
 

@@ -84,14 +84,27 @@
     return label;
 }
 
-- (void)updateProgress:(CGFloat)progress fallColor:(UIColor *)fallColor raiseColor:(UIColor *)raiseColor {
+- (void)updateProgress:(CGFloat)progress fallColor:(UIColor *)fallColor raiseColor:(UIColor *)raiseColor animaiton:(BOOL)isAnimation {
     self.backgroundColor = raiseColor;
     self.leftProgressLabel.text = [NSString stringWithFormat:@"%.0lf%%",progress * 100];
     self.rightProgressLabel.text = [NSString stringWithFormat:@"%.0lf%%",(1-progress) *100];
-    self.mitreSubView.frame = CGRectMake(0, 0, self.bounds.size.width *progress, self.bounds.size.height);
+    if (isAnimation) {
+        [UIView animateWithDuration:0.15 animations:^{
+            [self updateMitreSubViewFrame:progress];
+        }];
+    } else {
+        [self updateMitreSubViewFrame:progress];
+    }
     NSLog(@"%@",NSStringFromCGRect(self.mitreSubView.frame));
     self.mitreSubView.color = fallColor;
-    
+}
+
+- (void)updateMitreSubViewFrame:(CGFloat)progress {
+    CGFloat width = self.bounds.size.width *progress;
+    if (width <= self.bounds.size.height) {
+        width = self.bounds.size.height;
+    }
+    self.mitreSubView.frame = CGRectMake(0, 0, width, self.bounds.size.height);
 }
 
 @end

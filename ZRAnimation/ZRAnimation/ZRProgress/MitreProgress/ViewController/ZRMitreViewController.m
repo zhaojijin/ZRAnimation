@@ -24,7 +24,7 @@
     self.mitreView.layer.masksToBounds = YES;
     self.mitreView.layer.cornerRadius = 4;
     [self.view addSubview:self.mitreView];
-    [self.mitreView updateProgress:0.42 fallColor:[UIColor greenColor] raiseColor:[UIColor redColor]];
+    [self.mitreView updateProgress:0.99 fallColor:[UIColor greenColor] raiseColor:[UIColor redColor] animaiton:NO];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(40, CGRectGetMaxY(self.mitreView.frame) + 100, 300, 30)];
     label.textAlignment = NSTextAlignmentCenter;
     label.text = @"点击屏幕更换百分比";
@@ -35,7 +35,15 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGFloat progress = arc4random() % 100;
     progress = progress / 100.0;
-    [self.mitreView updateProgress:progress fallColor:[UIColor greenColor] raiseColor:[UIColor redColor]];
+    UIColor *fallColor = [UIColor greenColor];
+    UIColor *rColor = [UIColor redColor];
+//    UIColor *fallColor = [self randomColor];
+//    UIColor *rColor = [self randomColor];
+    [self.mitreView updateProgress:progress fallColor:fallColor raiseColor:rColor animaiton:YES];
+}
+
+- (UIColor *)randomColor {
+    return [UIColor colorWithRed:(arc4random() % 256)/255.0 green:(arc4random() % 256)/255.0 blue:(arc4random() % 256)/255.0 alpha:1];
 }
 
 /*
