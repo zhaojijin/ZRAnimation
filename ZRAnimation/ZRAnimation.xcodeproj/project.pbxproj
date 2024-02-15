@@ -768,7 +768,7 @@
 				DEVELOPMENT_TEAM = 8R8RTYMXAW;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZRAnimation/ZRBaseLib/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -788,7 +788,7 @@
 				DEVELOPMENT_TEAM = "";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZRAnimation/ZRBaseLib/ZRPrefixHeader.pch";
 				INFOPLIST_FILE = ZRAnimation/ZROther/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
